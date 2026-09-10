@@ -11,6 +11,7 @@
                 color: white;
                 text-decoration: none;
                 transition: 0.3s;
+                padding: 10px 20px;
             }
 
             a:hover 
@@ -23,9 +24,10 @@
 
             body
             {
-                background-color: black;
+                background-image: url('https://wallpaperaccess.com/full/2401680.jpg');
                 text-align: center;
                 color: white;
+                padding: 20px 20px;
             }
 
             button
@@ -41,7 +43,6 @@
 
             h1
             {
-                background-color: Black;
                 text-align: center;
                 color: lightblue;
 
@@ -54,21 +55,28 @@
 
             h2
             {
-                background-color: Black;
                 text-align: center;
                 color: lightblue;
+                animation: glow 2s infinite alternate;
+            }
+
+            @keyframes glow {
+                from {
+                    text-shadow: 0 0 5px lightblue, 0 0 10px lightblue, 0 0 15px blue;
+                }
+                to {
+                    text-shadow: 0 0 20px lightblue, 0 0 30px lightblue, 0 0 40px blue;
+                }
             }
 
             h3
             {
-                background-color: Black;
                 text-align: center;
                 color: lightblue;
             }
 
             p
             {
-                background-color: Black;
                 text-align: center;
                 color: lightblue;
             }
@@ -86,16 +94,33 @@
                     transform: rotate(360deg);
                 }
             }
+            img
+            {
+                display: block;
+                margin: 0 auto;
+                transition: transform 0.3s;
+            }
+
+            #earth
+            {
+                border-radius: 50%;
+                box-shadow:
+                    0 0 20px lightblue,
+                    0 0 40px blue,
+                    0 0 70px rgba(0, 100, 255, 0.5);
+                cursor: pointer;    
+            }
+
         </style>
     </head>
     <body>
         <h1>Welcome to Earth</h1>
-        <a href="day 2.html">Go Back</a>
+        <!--<a href="day 2.html">Go Back</a>-->
         <img id="earth" src="https://cdn.pixabay.com/photo/2011/12/13/14/28/earth-11009_1280.jpg" alt="The Earth" width="300" height="300">
         <h2>The Earth is our home planet</h2>
         <h3>Did you know?</h3>
-        <button id="factButton">Random Fact About Earth</button>
         <p id="fact"></p>
+        <button id="factButton">Random Fact About Earth</button>
         <a href="day 2.html">Go Back</a>
         <script>
             const facts = [

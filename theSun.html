@@ -4,30 +4,136 @@
         <meta charset="utf-8">
         <title>The Sun</title>
         <style>
-            body 
+            body
             {
-                background-color: black;
+                background-image: url('https://wallpapercave.com/wp/wp9116463.jpg');
                 text-align: center;
                 color: white;
+                padding: 20px 20px;
+                background-size: cover;
             }
 
             h1
             {
-                background-color: gray;
                 text-align: center;
                 color: orangered;
+                text-shadow: 
+                 0 0 10px orangered,
+                 0 0 20px orangered,
+                 0 0 30px red;
             }
-            
+
             a
             {
                 display: block;
                 color: white;
+                padding: 10px 20px;
+
+            }
+
+            a:hover 
+            {
+                color: orangered;
+                text-shadow: 
+                 0 0 10px orangered,
+                 0 0 20px red;
+            }
+
+            h2
+            {
+                text-align: center;
+                color: orangered;
+                animation: glow 2s infinite alternate;
+            }
+
+            @keyframes glow {
+                from {
+                    text-shadow: 0 0 5px orangered, 0 0 10px orangered, 0 0 15px red;
+                }
+                to {
+                    text-shadow: 0 0 20px orangered, 0 0 30px orangered, 0 0 40px red;
+                }
+            }
+
+            h3
+            {
+                text-align: center;
+                color: orangered;
+            }
+            
+            button
+            {
+                background-color: black;
+                color: orangered;
+                border: 2px solid orangered;
+                padding: 10px 20px;
+                font-size: 16px;
+                cursor: pointer;
+                transition: 0.3s;
+            }
+
+            p
+            {
+                color: orangered;
+                text-align: center;
+            }
+
+            #sun.flare
+            {
+                animation: flare 1s infinite alternate;
+            }
+
+            @keyframes flare
+            {
+                from{
+                    transform: scale(1);
+                    box-shadow: 0 0 20px orange;
+                }
+
+                to{
+                    transform: scale(1.08);
+                    box-shadow: 
+                        0 0 40px yellow,
+                        0 0 80px orange,
+                        0 0 120px red;
+                }
+            }
+
+            #sun
+            {
+                border-radius: 50%;
+                cursor: pointer;    
             }
         </style>
     </head>
     <body>
         <h1>Welcome to the Sun</h1>
-        <img src="https://spaceplace.nasa.gov/gallery-sun/en/solar-flare.en.jpg" alt="The Sun" width="500" height="300">
+        <img id="sun" src="https://th.bing.com/th/id/R.b93ecbd5d86bf78a66bc0562190d1ad4?rik=Cq4QrznUKGbmqQ&riu=http%3a%2f%2fassets.labroots.com%2f_public%2f_files%2fsystem%2fcontent-articles%2fimages%2fprofile%2f1685_4096x4096.jpg&ehk=e9YD7YgrFJu6teTi94X%2f8iotKWc9MRuVSThDJrQcCss%3d&risl=&pid=ImgRaw&r=0" alt="The Sun" width="300" height="300">
+        <h2>The Sun is The Center of Our Solar System</h2>
+        <h3>Did you know?</h3>
+        <p id="fact"></p>
+        <button id="factButton">Random Fact About the Sun</button>
         <a href="day 2.html">Go Back</a>
+        <script>
+            const facts = [
+                "The Sun doesn't have a solid surface like Earth.",
+                "The Sun is a star, not a planet.",
+                "The Sun is about 93 million miles away from Earth.",
+                "The Sun is about 109 times wider than Earth.",
+                "The Sun contains 99.86% of the total mass of the solar system."
+            ];
+
+            const factButton = document.getElementById("factButton");
+            const fact = document.getElementById("fact");
+
+            factButton.addEventListener("click", function() {
+                const randomNumber = Math.floor(Math.random() * facts.length);
+                fact.textContent = facts[randomNumber];
+            });
+            const sun = document.getElementById("sun");
+            sun.addEventListener("click", function() {
+                sun.classList.toggle("flare");    
+            })
+        </script>
     </body>
 </html>

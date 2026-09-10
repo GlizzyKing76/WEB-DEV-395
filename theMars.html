@@ -6,32 +6,103 @@
         <style>
             body
             {
-                background-color: black;
+                background-image: url('https://wallpapercave.com/wp/wp9116463.jpg');
                 text-align: center;
                 color: white;
+                padding: 20px 20px;
+                background-size: cover;
             }
 
             h1
             {
-                background-color: black;
                 text-align: center;
                 color: orange;
                 text-shadow: 
                  0 0 10px orange,
                  0 0 20px orange,
-                 0 0 30px red;
+                 0 0 30px yellow;
             }
 
             a
             {
                 display: block;
                 color: white;
+                padding: 10px 20px;
+
+            }
+
+            a:hover 
+            {
+                color: orange;
+                text-shadow: 
+                 0 0 10px orange,
+                 0 0 20px yellow;
+            }
+
+            h2
+            {
+                text-align: center;
+                color: orange;
+                animation: glow 2s infinite alternate;
+            }
+
+            @keyframes glow {
+                from {
+                    text-shadow: 0 0 5px orange, 0 0 10px orange, 0 0 15px yellow;
+                }
+                to {
+                    text-shadow: 0 0 20px orange, 0 0 30px orange, 0 0 40px yellow;
+                }
+            }
+
+            h3
+            {
+                text-align: center;
+                color: orange;
+            }
+            
+            button
+            {
+                background-color: black;
+                color: orange;
+                border: 2px solid orange;
+                padding: 10px 20px;
+                font-size: 16px;
+                cursor: pointer;
+                transition: 0.3s;
+            }
+
+            p
+            {
+                color: orange;
+                text-align: center;
             }
         </style>
     </head>
     <body>
         <h1>Welcome to Mars</h1>
-        <img src="https://www.nasa.gov/wp-content/uploads/2024/05/1-viking-mars-globe.jpg?w=1536&format=jpeg" alt="Mars" width="300" height="300">
+        <img id = 'mars' src="https://www.nasa.gov/wp-content/uploads/2024/05/1-viking-mars-globe.jpg?w=1536&format=jpeg" alt="Mars" width="300" height="300">
+        <h2>Mars is Humanity's Next Frontier</h2>
+        <h3>Did you know?</h3>
+        <p id="fact"></p>
+        <button id="factButton">Random Fact About Mars</button>
         <a href="day 2.html">Go Back</a>
+        <script>
+            const facts = [
+                "Mars has a thin atmosphere and is mostly composed of carbon dioxide.",
+                "Mars has the largest volcano in the solar system, Olympus Mons.",
+                "Mars has two small moons, Phobos and Deimos.",
+                "Mars is often called the 'Red Planet' due to iron oxide on its surface.",
+                "Mars has the largest canyon in the solar system, Valles Marineris."
+            ];
+
+            const factButton = document.getElementById("factButton");
+            const fact = document.getElementById("fact");
+
+            factButton.addEventListener("click", function() {
+                const randomNumber = Math.floor(Math.random() * facts.length);
+                fact.textContent = facts[randomNumber];
+            });
+        </script>
     </body>
 </html>
