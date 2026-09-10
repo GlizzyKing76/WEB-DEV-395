@@ -4,27 +4,9 @@
         <meta charset="utf-8">
         <title>The Earth</title>
         <style>
-            body
-            {
-                background-color: black;
-                text-align: center;
-                color: white;
-            }
-
-            h1
-            {
-                background-color: Black;
-                text-align: center;
-                color: lightblue;
-
-                text-shadow: 
-                 0 0 10px lightblue,
-                 0 0 20px lightblue,
-                 0 0 30px blue;
-            }
-
             a 
             {
+                text-align: center;
                 display: block;
                 color: white;
                 text-decoration: none;
@@ -39,6 +21,37 @@
                  0 0 20px blue;
             }
 
+            body
+            {
+                background-color: black;
+                text-align: center;
+                color: white;
+            }
+
+            button
+            {
+                background-color: black;
+                color: lightblue;
+                border: 2px solid lightblue;
+                padding: 10px 20px;
+                font-size: 16px;
+                cursor: pointer;
+                transition: 0.3s;
+            }
+
+            h1
+            {
+                background-color: Black;
+                text-align: center;
+                color: lightblue;
+
+                text-shadow: 
+                 0 0 10px lightblue,
+                 0 0 20px lightblue,
+                 0 0 30px blue;
+            }
+
+
             h2
             {
                 background-color: Black;
@@ -47,6 +60,13 @@
             }
 
             h3
+            {
+                background-color: Black;
+                text-align: center;
+                color: lightblue;
+            }
+
+            p
             {
                 background-color: Black;
                 text-align: center;
@@ -69,13 +89,31 @@
         </style>
     </head>
     <body>
-        <h1>Welcome to the Earth</h1>
-        <!--<img src="https://cdn.pixabay.com/photo/2011/12/13/14/28/earth-11009_1280.jpg" alt="The Earth" width="300" height="300">-->
+        <h1>Welcome to Earth</h1>
+        <a href="day 2.html">Go Back</a>
         <img id="earth" src="https://cdn.pixabay.com/photo/2011/12/13/14/28/earth-11009_1280.jpg" alt="The Earth" width="300" height="300">
         <h2>The Earth is our home planet</h2>
-        <h3>Facts about the Earth</h3>
+        <h3>Did you know?</h3>
+        <button id="factButton">Random Fact About Earth</button>
+        <p id="fact"></p>
         <a href="day 2.html">Go Back</a>
         <script>
+            const facts = [
+                "The Earth is the only planet known to support life.",
+                "About 71% of the Earth's surface is covered with water.",
+                "The Earth has a molten core that generates its magnetic field.",
+                "The Earth's atmosphere protects us from harmful solar radiation.",
+                "The Earth orbits the Sun at an average distance of about 93 million miles."
+            ];
+
+            const factButton = document.getElementById("factButton");
+            const fact = document.getElementById("fact");
+
+            factButton.addEventListener("click", function() {
+                const randomNumber = Math.floor(Math.random() * facts.length);
+                fact.textContent = facts[randomNumber];
+            })
+
             const earth = document.getElementById("earth");
             earth.addEventListener("click", function() {
                 earth.classList.toggle("spinning");

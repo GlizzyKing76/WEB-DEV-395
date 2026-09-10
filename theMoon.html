@@ -27,11 +27,89 @@
                 display: block;
                 color: white;
             }
+
+            h2
+            {
+                background-color: black;
+                text-align: center;
+                color: lightgray;
+            }
+
+            h3
+            {
+                background-color: black;
+                text-align: center;
+                color: lightgray;
+            }
+            
+            button
+            {
+                background-color: black;
+                color: lightgray;
+                border: 2px solid lightgray;
+                padding: 10px 20px;
+                font-size: 16px;
+                cursor: pointer;
+                transition: 0.3s;
+            }
         </style>
     </head>
     <body>
         <h1>Welcome to the Moon</h1>
-        <img src="https://imageio.forbes.com/specials-images/imageserve/649c36f19989cde982e45cbe/0x0.jpg?format=jpg&width=1200" alt="The Moon" width="300" height="300">
         <a href="day 2.html">Go Back</a>
+        <img id="moon" src="https://imageio.forbes.com/specials-images/imageserve/649c36f19989cde982e45cbe/0x0.jpg?format=jpg&width=1200" alt="The Moon" width="300" height="300">
+        <h2>The Moon is Earth's Only Natural Satellite</h2>
+        <h3>Did you know?</h3>
+        <button id="factButton">Random Fact About the Moon</button>
+        <p id="fact"></p>
+        <a href="day 2.html">Go Back</a>
+        <script>
+            const facts = [
+                "the Moon is about 1/4 the size of Earth.",
+                "the Moon is about 238,855 miles away from Earth.",
+                "the Moon has no atmosphere, which means there is no air to breathe.",
+                "the Moon has a gravitational pull that is 1/6th of Earth's.",
+                "the Moon affects the tides on Earth."
+            ];
+
+            const factButton = document.getElementById("factButton");
+            const fact = document.getElementById("fact");
+
+            factButton.addEventListener("click", function() {
+                const randomNumber = Math.floor(Math.random() * facts.length);
+                fact.textContent = facts[randomNumber];
+            });
+
+            const moon = document.getElementById("moon");
+
+            const moonPhases = [
+                <!-- New Moon -->
+                "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/New_Moon.jpg/1280px-New_Moon.jpg",
+                <!-- Waxing Crescent -->
+                "https://th.bing.com/th/id/R.b07c214d99e47b2e74d13553e6ca236e?rik=LGwl%2fQv0sJFihg&pid=ImgRaw&r=0",
+                <!-- First Quarter -->
+                "https://th.bing.com/th/id/R.4d3eb12bd770bb69de81a284868ca54c?rik=VpOmWTugvc%2bTaA&riu=http%3a%2f%2fd1jqu7g1y74ds1.cloudfront.net%2fwp-content%2fuploads%2f2010%2f06%2fFlying-Across-the-Moon1.jpg&ehk=9kNSVu1VEaPESqG27jnlGmYEm0VdvCSkRqyithFiLPc%3d&risl=&pid=ImgRaw&r=0",
+                <!-- Waxing Gibbous -->
+                "https://spaceandtelescope.com/wp-content/uploads/2023/03/Waxing-gibbous-moon.jpg",
+                <!-- Full Moon -->
+                "https://imageio.forbes.com/specials-images/imageserve/649c36f19989cde982e45cbe/0x0.jpg?format=jpg&width=1200",
+                <!-- Waning Gibbous -->
+                "https://th.bing.com/th/id/R.24cf9deecd0b96e3590ec0d6362e8c2e?rik=HKfKU9VLyxzsUg&riu=http%3a%2f%2fastronomy.robpettengill.org%2fphotos%2fslides%2fMoon2820WanGib140816.jpg&ehk=s%2bzLS85MuRHI%2fDxQw0%2fsLfs4kM2%2b6ioydyHl6pwfY34%3d&risl=&pid=ImgRaw&r=0",
+                <!-- Third Quarter -->
+                "https://images.fineartamerica.com/images-medium-large-5/third-quarter-moon-nasas-scientific-visualization-studioscience-photo-library.jpg",
+                <!-- Waning Crescent -->
+                "https://images.fineartamerica.com/images-medium-large-5/the-23-day-old-waning-crescent-moon-alan-dyer.jpg"
+            ];
+
+            let currentPhase = 5;
+
+            moon.addEventListener("click", function(){
+                currentPhase++;
+                if (currentPhase >= moonPhases.length) {
+                    currentPhase = 0;
+                }
+                moon.src = moonPhases[currentPhase];
+            });
+        </script>
     </body>
 </html>
