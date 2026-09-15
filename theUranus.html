@@ -4,30 +4,139 @@
         <meta charset="utf-8">
         <title>Uranus</title>
         <style>
-            body
+            a 
             {
-                background-color: black;
                 text-align: center;
-                color: white;
-            }
-            
-            h1
-            {
-                background-color: gray;
-                text-align: center;
-                color: orange;
-            }
-
-            a
-            {
                 display: block;
                 color: white;
+                text-decoration: none;
+                transition: 0.3s;
+                padding: 10px 20px;
             }
+
+            a:hover 
+            {
+                color: rgb(0, 225, 255);
+                text-shadow: 
+                 0 0 10px rgb(0, 225, 255),
+                 0 0 20px rgba(0, 225, 255, 0.678);
+            }
+
+            body
+            {
+                background-image: url('https://images.unsplash.com/photo-1498116069452-debf99cb30f0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMjA3fDB8MXxzZWFyY2h8M3x8YmxhY2slMjBzcGFjZXx8MHx8fHwxNjI1MTU0Nzk3&ixlib=rb-1.2.1&q=80&w=1080');
+                text-align: center;
+                color: white;
+                padding: 20px 20px;
+            }
+
+            button
+            {
+                background-color: black;
+                color: rgb(0, 225, 255);
+                border: 2px solid rgb(0, 225, 255);
+                padding: 10px 20px;
+                font-size: 16px;
+                cursor: pointer;
+                transition: 0.3s;
+            }
+
+            h1
+            {
+                text-align: center;
+                color: rgb(0, 225, 255);
+
+                text-shadow: 
+                 0 0 10px rgb(0, 225, 255),
+                 0 0 20px rgba(0, 225, 255, 0.678);
+            }
+
+
+            h2
+            {
+                text-align: center;
+                color: rgb(0, 225, 255);
+                animation: glow 2s infinite alternate;
+            }
+
+            @keyframes glow {
+                from {
+                    text-shadow: 0 0 5px rgb(0, 225, 255), 0 0 10px rgb(0, 225, 255), 0 0 15px rgba(0, 225, 255, 0.678);
+                }
+                to {
+                    text-shadow: 0 0 20px rgb(0, 225, 255), 0 0 30px rgb(0, 225, 255), 0 0 40px rgba(0, 225, 255, 0.678);
+                }
+            }
+
+            h3
+            {
+                text-align: center;
+                color: rgb(0, 225, 255);
+            }
+
+            h4
+            {
+                
+                text-align: center;
+                color: rgb(0, 225, 255);
+                font-size: 20px;
+            }
+
+            p
+            {
+                text-align: center;
+                color: rgb(0, 225, 255);
+            }
+
+            img
+            {
+                display: block;
+                margin: 0 auto;
+                transition: transform 0.3s;
+            }
+
         </style>
-    </head>>
+    </head>
     <body>
         <h1>Welcome to Uranus</h1>
-        <img src="https://assets.science.nasa.gov/dynamicimage/assets/science/cds/general/images/2024/03/uranus-pia18182-16x9-1.jpg?w=1920&h=1080&fit=clip&crop=faces%2Cfocalpoint" alt="Uranus" width="500" height="300">
+        <img id="uranus" src="https://static01.nyt.com/images/2023/04/04/multimedia/23sci-uranus-01-vftp/23sci-uranus-01-vftp-mediumSquareAt3X.jpg" alt="Uranus" width="300" height="300">
+        <h4>Click to show Uranus' rings!</h4>
+        <h2>Uranus is an Ice Giant</h2>
+        <h3>Did you know?</h3>
+        <p id="fact"></p>
+        <button id="factButton">Random Fact About Uranus</button>
         <a href="day 2.html">Go Back</a>
+        <script>
+            const facts = [
+                "Uranus is the seventh planet from the Sun.",
+                "Uranus is an ice giant and is the least massive of the gas giants.",
+                "Uranus has a unique sideways rotation, causing its poles to face the Sun.",
+                "Uranus has a system of rings, similar to Saturn's rings.",
+                "Uranus has 27 known moons."
+            ];
+
+            const factButton = document.getElementById("factButton");
+            const fact = document.getElementById("fact");
+
+            factButton.addEventListener("click", function() {
+                const randomNumber = Math.floor(Math.random() * facts.length);
+                fact.textContent = facts[randomNumber];
+            })
+
+            const uranus = document.getElementById('uranus');
+            const normalUranus = 'https://static01.nyt.com/images/2023/04/04/multimedia/23sci-uranus-01-vftp/23sci-uranus-01-vftp-mediumSquareAt3X.jpg';
+            const uranusWithRings = 'https://cdn.mos.cms.futurecdn.net/vFL2StpmgYzT9QtZMbbgWS.jpeg';
+            let showingRings = false;
+        
+            uranus.addEventListener('click', function() {
+                if (uranus.src === normalUranus) {
+                    uranus.src = uranusWithRings;
+                    showingRings = true;
+                } else {
+                    uranus.src = normalUranus;
+                    showingRings = false;
+                }
+            });
+        </script>
     </body>
 </html>

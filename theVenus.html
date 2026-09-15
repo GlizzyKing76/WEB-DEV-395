@@ -4,30 +4,166 @@
         <meta charset="utf-8">
         <title>Venus</title>
         <style>
-            body
+            a 
             {
-                background-color: black;
                 text-align: center;
-                color: white;
-            }
-            
-            h1
-            {
-                background-color: gray;
-                text-align: center;
-                color: orange;
-            }
-
-            a
-            {
                 display: block;
                 color: white;
+                text-decoration: none;
+                transition: 0.3s;
+                padding: 10px 20px;
             }
+
+            a:hover 
+            {
+                color: rgb(255, 166, 0);
+                text-shadow: 
+                 0 0 10px rgb(255, 166, 0),
+                 0 0 20px rgba(255, 166, 0, 0.678);
+            }
+
+            body
+            {
+                background-image: url('https://images.unsplash.com/photo-1498116069452-debf99cb30f0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMjA3fDB8MXxzZWFyY2h8M3x8YmxhY2slMjBzcGFjZXx8MHx8fHwxNjI1MTU0Nzk3&ixlib=rb-1.2.1&q=80&w=1080');
+                text-align: center;
+                color: white;
+                padding: 20px 20px;
+            }
+
+            button
+            {
+                background-color: black;
+                color: rgb(255, 166, 0);
+                border: 2px solid rgb(255, 166, 0);
+                padding: 10px 20px;
+                font-size: 16px;
+                cursor: pointer;
+                transition: 0.3s;
+            }
+
+            h1
+            {
+                text-align: center;
+                color: rgb(255, 166, 0);
+
+                text-shadow: 
+                 0 0 10px rgb(255, 166, 0),
+                 0 0 20px rgb(255, 166, 0),
+                 0 0 30px rgba(255, 166, 0, 0.678);
+            }
+
+
+            h2
+            {
+                text-align: center;
+                color: rgb(255, 166, 0);
+                animation: glow 2s infinite alternate;
+            }
+
+            @keyframes glow {
+                from {
+                    text-shadow: 0 0 5px rgb(255, 166, 0), 0 0 10px rgb(255, 166, 0), 0 0 15px rgba(255, 166, 0, 0.678);
+                }
+                to {
+                    text-shadow: 0 0 20px rgb(255, 166, 0), 0 0 30px rgb(255, 166, 0), 0 0 40px rgba(255, 166, 0, 0.678);
+                }
+            }
+
+            h3
+            {
+                text-align: center;
+                color: rgb(255, 166, 0);
+            }
+
+            h4
+            {
+                
+                text-align: center;
+                color: rgb(255, 166, 0);
+                font-size: 20px;
+            }
+
+            p
+            {
+                text-align: center;
+                color: rgb(255, 166, 0);
+            }
+
+            img
+            {
+                display: block;
+                margin: 0 auto;
+                transition: transform 0.3s;
+            }
+
+            #venus
+            {
+                border-radius: 50%;
+                cursor: pointer;
+                transition: 1s;
+            }
+            #venus.hot
+            {
+                box-shadow:
+                    0 0 20px rgb(255, 166, 0),
+                    0 0 40px rgb(255, 166, 0),
+                    0 0 70px rgba(255, 166, 0, 0.678);
+                transform: scale(1.1);    
+            }
+            #venus.veryHot
+            {
+                box-shadow:
+                    0 0 20px rgb(255, 0, 0),
+                    0 0 40px rgb(255, 0, 0),
+                    0 0 70px rgba(255, 0, 0, 0.678);
+                transform: scale(1.2);    
+            }
+
         </style>
-    </head>>
+    </head>
     <body>
         <h1>Welcome to Venus</h1>
-        <img src="https://cdn.mos.cms.futurecdn.net/BSPnH7exyqzuxPxtyt3bbh.jpg" alt="Venus" width="500" height="300">
+        <img id="venus" src="https://cdn.britannica.com/86/21186-050-C48F8AA1/radar-clouds-Scientists-surface-Venus-computer-image.jpg" alt="Venus" width="300" height="300">
+        <h4>Click to heat up Venus!</h4>
+        <h2>Venus is the Closest Planet to Earth</h2>
+        <h3>Did you know?</h3>
+        <p id="fact"></p>
+        <button id="factButton">Random Fact About Venus</button>
         <a href="day 2.html">Go Back</a>
+        <script>
+            const facts = [
+                "Venus is the second planet from the Sun.",
+                "Venus is often called Earth's 'sister planet' due to their similar size and mass.",
+                "Venus has a thick, toxic atmosphere that traps heat, making it the hottest planet in our solar system.",
+                "Venus rotates in the opposite direction to most planets, meaning the Sun rises in the west and sets in the east.",
+                "Venus has no moons."
+            ];
+
+            const factButton = document.getElementById("factButton");
+            const fact = document.getElementById("fact");
+
+            factButton.addEventListener("click", function() {
+                const randomNumber = Math.floor(Math.random() * facts.length);
+                fact.textContent = facts[randomNumber];
+            })
+
+            const venus = document.getElementById("venus");
+            let heat = 0;
+            venus.addEventListener("click", function() {
+                heat++;
+                if (heat === 1){
+                    venus.classList.add('hot');
+                }
+                else if (heat === 2) {
+                    venus.classList.remove('hot');
+                    venus.classList.add('veryHot');
+                }
+                else {
+                    heat = 0;
+                    venus.classList.remove('hot', 'veryHot');
+                }
+            })
+
+        </script>
     </body>
 </html>

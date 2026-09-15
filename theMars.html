@@ -77,6 +77,23 @@
                 color: orange;
                 text-align: center;
             }
+
+            #mars
+            {
+                border-radius: 50%;
+                cursor: pointer;
+                transition: 1s;    
+            }
+
+            #mars.dustStorm
+            {
+                filter: brightness(0.7) sepia(0.5);
+                box-shadow:
+                    0 0 20px orange,
+                    0 0 40px orangered,
+                    0 0 70px red;
+            }
+
         </style>
     </head>
     <body>
@@ -102,6 +119,11 @@
             factButton.addEventListener("click", function() {
                 const randomNumber = Math.floor(Math.random() * facts.length);
                 fact.textContent = facts[randomNumber];
+            });
+
+            const mars = document.getElementById("mars");
+            mars.addEventListener("click", function() {
+                mars.classList.toggle("dustStorm");
             });
         </script>
     </body>
