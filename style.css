@@ -13,6 +13,16 @@ body{
     padding: 20px 20px;
 }
 
+/* ========================================
+   Planet Image
+   ======================================== */
+
+.planet-image {
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+}
+
 /*
 -----------------------------------------------------EARTH PAGE STYLES-----------------------------------------------------
 */
@@ -332,23 +342,203 @@ body{
     text-align: center;
 }
 
-/* ========================================
-   Planet Image
-   ======================================== */
 
-.planet-image {
-    border-radius: 50%;
-    display: block;
-    margin: 0 auto;
-}
 
 /*
 -----------------------------------------------------MERCURY PAGE STYLES-----------------------------------------------------
 */
 
+/* ========================================
+   HEADINGS (Mercury)
+   ======================================== */
+
+.mercury-page h1 {
+    text-align: center;
+    color: lightgray;
+
+    text-shadow:
+        0 0 10px lightgray,
+        0 0 20px lightgray,
+        0 0 30px gray;
+}
+
+.mercury-page h2 {
+    text-align: center;
+    color: lightgray;
+    animation: glow 2s infinite alternate;
+}
+
+.mercury-page h3 {
+    text-align: center;
+    color: lightgray;
+}
+
+/* ========================================
+   HEADING GLOW ANIMATION (Mercury)
+   ======================================== */
+
+.mercury-page h2 {
+    color: lightgray;
+    animation: mercuryGlow 2s infinite alternate;
+}
+
+@keyframes mercuryGlow {
+    from {
+        text-shadow:
+            0 0 5px lightgray,
+            0 0 10px lightgray,
+            0 0 15px gray;
+    }
+
+    to {
+        text-shadow:
+            0 0 20px lightgray,
+            0 0 30px lightgray,
+            0 0 40px gray;
+    }
+}
+
+/* ========================================
+   LINKS (Mercury)
+   ======================================== */
+
+.mercury-page a {
+    display: block;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+.mercury-page a:hover {
+    color: lightgray;
+
+    text-shadow:
+        0 0 10px lightgray,
+        0 0 20px lightgray,
+        0 0 30px gray;
+}
+
+/* ========================================
+   BUTTON (Mercury)
+   ======================================== */
+
+.mercury-page button {
+    background-color: black;
+    color: lightgray;
+    border: 2px solid lightgray;
+
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* ========================================
+   FACT TEXT (Mercury)
+   ======================================== */
+
+.mercury-page p {
+    color: lightgray;
+    text-align: center;
+}
+
 /*
 -----------------------------------------------------NEPTUNE PAGE STYLES-----------------------------------------------------
 */
+
+/* ========================================
+   HEADINGS (Neptune)
+   ======================================== */
+
+.neptune-page h1 {
+    text-align: center;
+    color: blue;
+
+    text-shadow:
+        0 0 10px blue,
+        0 0 20px blue,
+        0 0 30px rgb(26, 47, 233);
+}
+
+.neptune-page h2 {
+    text-align: center;
+    color: blue;
+    animation: glow 2s infinite alternate;
+}
+
+.neptune-page h3 {
+    text-align: center;
+    color: blue;
+}
+
+/* ========================================
+   HEADING GLOW ANIMATION (Neptune)
+   ======================================== */
+
+.neptune-page h2 {
+    color: blue;
+    animation: neptuneGlow 2s infinite alternate;
+}
+
+@keyframes neptuneGlow {
+    from {
+        text-shadow:
+            0 0 5px blue,
+            0 0 10px blue,
+            0 0 15px rgb(26, 47, 233);
+    }
+
+    to {
+        text-shadow:
+            0 0 20px blue,
+            0 0 30px blue,
+            0 0 40px rgb(26, 47, 233);
+    }
+}
+
+/* ========================================
+   LINKS (Neptune)
+   ======================================== */
+
+.neptune-page a {
+    display: block;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+.neptune-page a:hover {
+    color: blue;
+
+    text-shadow:
+        0 0 10px blue,
+        0 0 20px blue,
+        0 0 30px rgb(26, 47, 233);
+}
+
+/* ========================================
+   BUTTON (Neptune)
+   ======================================== */
+
+.neptune-page button {
+    background-color: black;
+    color: blue;
+    border: 2px solid blue;
+
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* ========================================
+   FACT TEXT (Neptune)
+   ======================================== */
+
+.neptune-page p {
+    color: blue;
+    text-align: center;
+}
 
 /*
 -----------------------------------------------------SATURN PAGE STYLES-----------------------------------------------------
@@ -362,10 +552,292 @@ body{
 -----------------------------------------------------SUN PAGE STYLES-----------------------------------------------------
 */
 
+/* ========================================
+   HEADINGS (Sun)
+   ======================================== */
+
+.sun-page h1 {
+    text-align: center;
+    color: orangered;
+
+    text-shadow:
+        0 0 10px orangered,
+        0 0 20px orangered,
+        0 0 30px red;
+}
+
+.sun-page h2 {
+    text-align: center;
+    color: orangered;
+    animation: glow 2s infinite alternate;
+}
+
+.sun-page h3 {
+    text-align: center;
+    color: orangered;
+}
+
+/* ========================================
+   HEADING GLOW ANIMATION (Sun)
+   ======================================== */
+
+.sun-page h2 {
+    color: orangered;
+    animation: sunGlow 2s infinite alternate;
+}
+
+@keyframes sunGlow {
+    from {
+        text-shadow:
+            0 0 5px orangered,
+            0 0 10px orangered,
+            0 0 15px red;
+    }
+
+    to {
+        text-shadow:
+            0 0 20px orangered,
+            0 0 30px orangered,
+            0 0 40px red;
+    }
+}
+
+/* ========================================
+   LINKS (Sun)
+   ======================================== */
+
+.sun-page a {
+    display: block;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+.sun-page a:hover {
+    color: orangered;
+
+    text-shadow:
+        0 0 10px orangered,
+        0 0 20px orangered,
+        0 0 30px red;
+}
+
+/* ========================================
+   BUTTON (Sun)
+   ======================================== */
+
+.sun-page button {
+    background-color: black;
+    color: orangered;
+    border: 2px solid orangered;
+
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* ========================================
+   FACT TEXT (Sun)
+   ======================================== */
+
+.sun-page p {
+    color: orangered;
+    text-align: center;
+}
+
 /*
 -----------------------------------------------------URANUS PAGE STYLES-----------------------------------------------------
 */
 
+/* ========================================
+   HEADINGS (Uranus)
+   ======================================== */
+
+.uranus-page h1 {
+    text-align: center;
+    color: rgb(0, 225, 255);
+
+    text-shadow:
+        0 0 10px rgb(0, 225, 255),
+        0 0 20px rgb(0, 225, 255),
+        0 0 30px rgba(0, 225, 255, 0.678);
+}
+
+.uranus-page h2 {
+    text-align: center;
+    color: rgb(0, 225, 255);
+    animation: glow 2s infinite alternate;
+}
+
+.uranus-page h3 {
+    text-align: center;
+    color: rgb(0, 225, 255);
+}
+
+/* ========================================
+   HEADING GLOW ANIMATION (Uranus)
+   ======================================== */
+
+.uranus-page h2 {
+    color: rgb(0, 225, 255);
+    animation: uranusGlow 2s infinite alternate;
+}
+
+@keyframes uranusGlow {
+    from {
+        text-shadow:
+            0 0 5px rgb(0, 225, 255),
+            0 0 10px rgb(0, 225, 255),
+            0 0 15px rgba(0, 225, 255, 0.678);
+    }
+
+    to {
+        text-shadow:
+            0 0 20px rgb(0, 225, 255),
+            0 0 30px rgb(0, 225, 255),
+            0 0 40px rgba(0, 225, 255, 0.678);
+    }
+}
+
+/* ========================================
+   LINKS (Uranus)
+   ======================================== */
+
+.uranus-page a {
+    display: block;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+.uranus-page a:hover {
+    color: rgb(0, 225, 255);
+
+    text-shadow:
+        0 0 10px rgb(0, 225, 255),
+        0 0 20px rgb(0, 225, 255),
+        0 0 30px rgba(0, 225, 255, 0.678);
+}
+
+/* ========================================
+   BUTTON (Uranus)
+   ======================================== */
+
+.uranus-page button {
+    background-color: black;
+    color: rgb(0, 225, 255);
+    border: 2px solid rgb(0, 225, 255);
+
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* ========================================
+   FACT TEXT (Uranus)
+   ======================================== */
+
+.uranus-page p {
+    color: rgb(0, 225, 255);
+    text-align: center;
+}
+
 /*
 -----------------------------------------------------VENUS PAGE STYLES-----------------------------------------------------
 */
+
+/* ========================================
+   HEADINGS (Venus)
+   ======================================== */
+
+.venus-page h1 {
+    text-align: center;
+    color: rgb(255, 166, 0);
+
+    text-shadow:
+        0 0 10px rgb(255, 166, 0),
+        0 0 20px rgb(255, 166, 0),
+        0 0 30px rgba(255, 166, 0, 0.678);
+}
+
+.venus-page h2 {
+    text-align: center;
+    color: rgb(255, 166, 0);
+    animation: glow 2s infinite alternate;
+}
+
+.venus-page h3 {
+    text-align: center;
+    color: rgb(255, 166, 0);
+}
+
+/* ========================================
+   HEADING GLOW ANIMATION (Venus)
+   ======================================== */
+
+.venus-page h2 {
+    color: rgb(255, 166, 0);
+    animation: venusGlow 2s infinite alternate;
+}
+
+@keyframes venusGlow {
+    from {
+        text-shadow:
+            0 0 5px rgb(255, 166, 0),
+            0 0 10px rgb(255, 166, 0),
+            0 0 15px rgba(255, 166, 0, 0.678);
+    }
+
+    to {
+        text-shadow:
+            0 0 20px rgb(255, 166, 0),
+            0 0 30px rgb(255, 166, 0),
+            0 0 40px rgba(255, 166, 0, 0.678);
+    }
+}
+
+/* ========================================
+   LINKS (Venus)
+   ======================================== */
+
+.venus-page a {
+    display: block;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+.venus-page a:hover {
+    color: rgb(255, 166, 0);
+
+    text-shadow:
+        0 0 10px rgb(255, 166, 0),
+        0 0 20px rgb(255, 166, 0),
+        0 0 30px rgba(255, 166, 0, 0.678);
+}
+
+/* ========================================
+   BUTTON (Venus)
+   ======================================== */
+
+.venus-page button {
+    background-color: black;
+    color: rgb(255, 166, 0);
+    border: 2px solid rgb(255, 166, 0);
+
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* ========================================
+   FACT TEXT (Venus)
+   ======================================== */
+
+.venus-page p {
+    color: rgb(255, 166, 0);
+    text-align: center;
+}

@@ -3,89 +3,11 @@
     <head>
         <meta charset="utf-8">
         <title>Neptune</title>
-        <style>
-            body
-            {
-                background-image: url('https://wallpapercave.com/wp/wp9116463.jpg');
-                text-align: center;
-                color: white;
-                padding: 20px 20px;
-                background-size: cover;
-            }
-
-            h1
-            {
-                text-align: center;
-                color: burlywood;
-                text-shadow: 
-                 0 0 10px burlywood,
-                 0 0 20px burlywood,
-                 0 0 30px brown;
-            }
-
-            a
-            {
-                display: block;
-                color: white;
-                padding: 10px 20px;
-
-            }
-
-            a:hover 
-            {
-                color: burlywood;
-                text-shadow: 
-                 0 0 10px burlywood,
-                 0 0 20px burlywood,
-                 0 0 30px brown;
-            }
-
-            h2
-            {
-                text-align: center;
-                color: burlywood;
-                animation: glow 2s infinite alternate;
-            }
-
-            @keyframes glow {
-                from {
-                    text-shadow: 0 0 5px burlywood, 0 0 10px burlywood, 0 0 15px brown;
-                }
-                to {
-                    text-shadow: 0 0 20px burlywood, 0 0 30px burlywood, 0 0 40px brown;
-                }
-            }
-
-            h3
-            {
-                text-align: center;
-                color: burlywood;
-            }
-            
-            button
-            {
-                background-color: black;
-                color: burlywood;
-                border: 2px solid burlywood;
-                padding: 10px 20px;
-                font-size: 16px;
-                cursor: pointer;
-                transition: 0.3s;
-            }
-
-            p
-            {
-                color: burlywood;
-                text-align: center;
-            }
-
-
-
-        </style>
+        <link rel="stylesheet" href="style.css">
     </head>
-    <body>
+    <body class="neptune-page">
         <h1>Welcome to Neptune</h1>
-        <img id = 'neptune' src="https://upload.wikimedia.org/wikipedia/commons/8/84/Hubble_Visible_View_of_Jupiter.jpg" alt="Neptune" width="300" height="300">
+        <img id = 'neptune' class = 'planet-image' src="https://tse1.explicit.bing.net/th/id/OIP.ZvURCUEJc9dR5w35j9_-bwHaHZ?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Neptune" width="300" height="300">
         <h2>Neptune is a Gas Giant</h2>
         <h3>Did you know?</h3>
         <p id="fact"></p>
