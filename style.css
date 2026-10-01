@@ -1,0 +1,371 @@
+/* ========================================
+   GENERAL WEBSITE STYLES
+   ======================================== */
+
+body{
+    background-image: url('https://wallpapercave.com/wp/wp9116463.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    text-align: center;
+    color: white;
+    padding: 20px 20px;
+}
+
+/*
+-----------------------------------------------------EARTH PAGE STYLES-----------------------------------------------------
+*/
+
+/* ========================================
+   HEADINGS (Earth)
+   ======================================== */
+
+.earth-page h1 {
+    text-align: center;
+    color: lightblue;
+
+    text-shadow:
+        0 0 10px lightblue,
+        0 0 20px lightblue,
+        0 0 30px blue;
+}
+
+.earth-page h2 {
+    text-align: center;
+    color: lightblue;
+    animation: glow 2s infinite alternate;
+}
+
+.earth-page h3 {
+    text-align: center;
+    color: lightblue;
+}
+
+/* ========================================
+   HEADING GLOW ANIMATION (Earth)
+   ======================================== */
+
+.earth-page h2 {
+    color: lightblue;
+    animation: earthGlow 2s infinite alternate;
+}
+
+@keyframes earthGlow {
+    from {
+        text-shadow:
+            0 0 5px lightblue,
+            0 0 10px lightblue,
+            0 0 15px blue;
+    }
+
+    to {
+        text-shadow:
+            0 0 20px lightblue,
+            0 0 30px lightblue,
+            0 0 40px blue;
+    }
+}
+
+/* ========================================
+   LINKS (Earth)
+   ======================================== */
+
+.earth-page a {
+    display: block;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+.earth-page a:hover {
+    color: lightblue;
+
+    text-shadow:
+        0 0 10px lightblue,
+        0 0 20px lightblue,
+        0 0 30px blue;
+}
+
+/* ========================================
+   BUTTON (Earth)
+   ======================================== */
+
+.earth-page button {
+    background-color: black;
+    color: lightblue;
+    border: 2px solid lightblue;
+
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* ========================================
+   FACT TEXT (Earth)
+   ======================================== */
+
+.earth-page p {
+    color: lightblue;
+    text-align: center;
+}
+
+/* ========================================
+   Planet Image (Earth)
+   ======================================== */
+
+.earth-page #earth {
+    border-radius: 50%;
+    box-shadow:
+        0 0 20px lightblue,
+        0 0 40px blue,
+        0 0 70px rgba(0, 100, 255, 0.5);
+
+}
+
+/*
+-----------------------------------------------------JUPITER PAGE STYLES-----------------------------------------------------
+*/
+
+/* ========================================
+   HEADINGS (Jupiter)
+   ======================================== */
+
+.jupiter-page h1 {
+    text-align: center;
+    color: burlywood;
+
+    text-shadow:
+        0 0 10px burlywood,
+        0 0 20px burlywood,
+        0 0 30px brown;
+}
+
+.jupiter-page h2 {
+    text-align: center;
+    color: burlywood;
+    animation: glow 2s infinite alternate;
+}
+
+.jupiter-page h3 {
+    text-align: center;
+    color: burlywood;
+}
+
+/* ========================================
+   HEADING GLOW ANIMATION (Jupiter)
+   ======================================== */
+
+.jupiter-page h2 {
+    color: burlywood;
+    animation: jupiterGlow 2s infinite alternate;
+}
+
+@keyframes jupiterGlow {
+    from {
+        text-shadow:
+            0 0 5px burlywood,
+            0 0 10px burlywood,
+            0 0 15px brown;
+    }
+
+    to {
+        text-shadow:
+            0 0 20px burlywood,
+            0 0 30px burlywood,
+            0 0 40px brown;
+    }
+}
+
+/* ========================================
+   LINKS (Jupiter)
+   ======================================== */
+
+.jupiter-page a {
+    display: block;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+.jupiter-page a:hover {
+    color: burlywood;
+
+    text-shadow:
+        0 0 10px burlywood,
+        0 0 20px burlywood,
+        0 0 30px brown;
+}
+
+/* ========================================
+   BUTTON (Jupiter)
+   ======================================== */
+
+.jupiter-page button {
+    background-color: black;
+    color: burlywood;
+    border: 2px solid burlywood;
+
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* ========================================
+   FACT TEXT (Jupiter)
+   ======================================== */
+
+.jupiter-page p {
+    color: burlywood;
+    text-align: center;
+}
+
+/* ========================================
+   Planet Image (Jupiter)
+   ======================================== */
+
+.jupiter-page #jupiter {
+    border-radius: 50%;
+    box-shadow:
+        0 0 20px burlywood,
+        0 0 40px brown,
+        0 0 70px rgba(139, 69, 19, 0.5);
+}
+
+/*
+-----------------------------------------------------MARS PAGE STYLES-----------------------------------------------------
+*/
+
+/* ========================================
+   HEADINGS (Mars)
+   ======================================== */
+
+.mars-page h1 {
+    text-align: center;
+    color: orange;
+
+    text-shadow:
+        0 0 10px orange,
+        0 0 20px orange,
+        0 0 30px yellow;
+}
+
+.mars-page h2 {
+    text-align: center;
+    color: orange;
+    animation: glow 2s infinite alternate;
+}
+
+.mars-page h3 {
+    text-align: center;
+    color: orange;
+}
+
+/* ========================================
+   HEADING GLOW ANIMATION (Mars)
+   ======================================== */
+
+.mars-page h2 {
+    color: orange;
+    animation: marsGlow 2s infinite alternate;
+}
+
+@keyframes marsGlow {
+    from {
+        text-shadow:
+            0 0 5px orange,
+            0 0 10px orange,
+            0 0 15px yellow;
+    }
+
+    to {
+        text-shadow:
+            0 0 20px orange,
+            0 0 30px orange,
+            0 0 40px yellow;
+    }
+}
+
+/* ========================================
+   LINKS (Mars)
+   ======================================== */
+
+.mars-page a {
+    display: block;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+.mars-page a:hover {
+    color: orange;
+
+    text-shadow:
+        0 0 10px orange,
+        0 0 20px orange,
+        0 0 30px yellow;
+}
+
+/* ========================================
+   BUTTON (Mars)
+   ======================================== */
+
+.mars-page button {
+    background-color: black;
+    color: orange;
+    border: 2px solid orange;
+
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* ========================================
+   FACT TEXT (Mars)
+   ======================================== */
+
+.mars-page p {
+    color: orange;
+    text-align: center;
+}
+
+/* ========================================
+   Planet Image
+   ======================================== */
+
+.planet-image {
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+}
+
+/*
+-----------------------------------------------------MERCURY PAGE STYLES-----------------------------------------------------
+*/
+
+/*
+-----------------------------------------------------NEPTUNE PAGE STYLES-----------------------------------------------------
+*/
+
+/*
+-----------------------------------------------------SATURN PAGE STYLES-----------------------------------------------------
+*/
+
+/*
+-----------------------------------------------------SOLAR SYSTEM PAGE STYLES-----------------------------------------------------
+*/
+
+/*
+-----------------------------------------------------SUN PAGE STYLES-----------------------------------------------------
+*/
+
+/*
+-----------------------------------------------------URANUS PAGE STYLES-----------------------------------------------------
+*/
+
+/*
+-----------------------------------------------------VENUS PAGE STYLES-----------------------------------------------------
+*/

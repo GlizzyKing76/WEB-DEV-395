@@ -6,28 +6,107 @@
         <style>
             body
             {
-                background-color: black;
+                background-image: url('https://wallpapercave.com/wp/wp9116463.jpg');
                 text-align: center;
                 color: white;
+                padding: 20px 20px;
+                background-size: cover;
             }
 
             h1
             {
-                background-color: black;
                 text-align: center;
-                color: lightgray;
+                color: burlywood;
+                text-shadow: 
+                 0 0 10px burlywood,
+                 0 0 20px burlywood,
+                 0 0 30px brown;
             }
 
             a
             {
                 display: block;
                 color: white;
+                padding: 10px 20px;
+
             }
+
+            a:hover 
+            {
+                color: burlywood;
+                text-shadow: 
+                 0 0 10px burlywood,
+                 0 0 20px burlywood,
+                 0 0 30px brown;
+            }
+
+            h2
+            {
+                text-align: center;
+                color: burlywood;
+                animation: glow 2s infinite alternate;
+            }
+
+            @keyframes glow {
+                from {
+                    text-shadow: 0 0 5px burlywood, 0 0 10px burlywood, 0 0 15px brown;
+                }
+                to {
+                    text-shadow: 0 0 20px burlywood, 0 0 30px burlywood, 0 0 40px brown;
+                }
+            }
+
+            h3
+            {
+                text-align: center;
+                color: burlywood;
+            }
+            
+            button
+            {
+                background-color: black;
+                color: burlywood;
+                border: 2px solid burlywood;
+                padding: 10px 20px;
+                font-size: 16px;
+                cursor: pointer;
+                transition: 0.3s;
+            }
+
+            p
+            {
+                color: burlywood;
+                text-align: center;
+            }
+
+
+
         </style>
     </head>
     <body>
         <h1>Welcome to Mercury</h1>
-        <img src="https://assets.science.nasa.gov/dynamicimage/assets/science/psd/solar-system/mercury/images/messenger_high_resolution_view_of_mercury_pia_13840.jpg?w=4575&h=4575&fit=clip&crop=faces%2Cfocalpoint" alt="Mercury" width="300" height="300">
-        <a href="day 2.html">Go Back</a>
+        <img id = 'mercury' src="https://upload.wikimedia.org/wikipedia/commons/8/84/Hubble_Visible_View_of_Jupiter.jpg" alt="Mercury" width="300" height="300">
+        <h2>Mercury is the smallest planet in our solar system.</h2>
+        <h3>Did you know?</h3>
+        <p id="fact"></p>
+        <button id="factButton">Random Fact About Mercury</button>
+        <a href="theSolarSystem.html">Go Back</a>
+        <script>
+            const facts = [
+                "Mercury is the smallest planet in our solar system.",
+                "Mercury is the hottest planet in our solar system.",
+                "Mercury has no atmosphere.",
+                "Mercury is the fastest planet in our solar system.",
+                "Mercury is named after the Roman messenger god."
+            ];
+
+            const factButton = document.getElementById("factButton");
+            const fact = document.getElementById("fact");
+
+            factButton.addEventListener("click", function() {
+                const randomNumber = Math.floor(Math.random() * facts.length);
+                fact.textContent = facts[randomNumber];
+            });
+        </script>
     </body>
 </html>
