@@ -23,6 +23,35 @@ body{
     margin: 0 auto;
 }
 
+/* ========================================
+   NAVIGATION BAR
+   ======================================== */
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+nav a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border: 1px solid white;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: cyan;
+    border-color: cyan;
+    text-shadow: 0 0 10px cyan;
+}
+
 /*
 -----------------------------------------------------EARTH PAGE STYLES-----------------------------------------------------
 */
@@ -224,12 +253,20 @@ body{
 }
 
 /* ========================================
-   FACT TEXT (Jupiter)
+   TEXT (Jupiter)
    ======================================== */
 
 .jupiter-page p {
     color: burlywood;
     text-align: center;
+    font-size: 18px;
+}
+
+.jupiter-page b {
+    color: burlywood;
+    text-align: justify;
+    font-size: 18px;
+    margin-bottom: 20px;
 }
 
 /* ========================================
@@ -407,6 +444,7 @@ body{
     color: white;
     padding: 10px 20px;
     text-decoration: none;
+    text-align: center;
 }
 
 .mercury-page a:hover {
@@ -434,12 +472,32 @@ body{
 }
 
 /* ========================================
-   FACT TEXT (Mercury)
+   TEXT (Mercury)
    ======================================== */
 
 .mercury-page p {
     color: lightgray;
     text-align: center;
+    font-size: 18px;
+}
+
+.mercury-page b {
+    color: lightgray;
+    text-align: justify;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* ========================================
+   Planet Image (Mercury)
+   ======================================== */
+
+.mercury-page #mercury {
+    border-radius: 50%;
+    box-shadow:
+        0 0 20px lightgray,
+        0 0 40px lightgray,
+        0 0 70px gray;
 }
 
 /*
@@ -540,13 +598,238 @@ body{
     text-align: center;
 }
 
+/* ========================================
+   Planet Image (Neptune)
+   ======================================== */
+
+.neptune-page #neptune {
+    border-radius: 50%;
+    box-shadow:
+        0 0 20px blue,
+        0 0 40px blue,
+        0 0 70px rgb(26, 47, 233);
+
+}
+
 /*
 -----------------------------------------------------SATURN PAGE STYLES-----------------------------------------------------
 */
 
+/* ========================================
+   HEADINGS (Saturn)
+   ======================================== */
+
+.saturn-page h1 {
+    text-align: center;
+    color: goldenrod;
+
+    text-shadow:
+        0 0 10px goldenrod,
+        0 0 20px goldenrod,
+        0 0 30px rgba(218, 165, 32, 0.8);
+}
+
+.saturn-page h2 {
+    text-align: center;
+    color: goldenrod;
+    animation: glow 2s infinite alternate;
+}
+
+.saturn-page h3 {
+    text-align: center;
+    color: goldenrod;
+}
+
+/* ========================================
+   HEADING GLOW ANIMATION (Saturn)
+   ======================================== */
+
+.saturn-page h2 {
+    color: goldenrod;
+    animation: saturnGlow 2s infinite alternate;
+}
+
+@keyframes saturnGlow {
+    from {
+        text-shadow:
+            0 0 5px goldenrod,
+            0 0 10px goldenrod,
+            0 0 15px rgba(218, 165, 32, 0.8);
+    }
+
+    to {
+        text-shadow:
+            0 0 20px goldenrod,
+            0 0 30px goldenrod,
+            0 0 40px rgba(218, 165, 32, 0.8);
+    }
+}
+
+/* ========================================
+   LINKS (Saturn)
+   ======================================== */
+
+.saturn-page a {
+    display: block;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+.saturn-page a:hover {
+    color: goldenrod;
+
+    text-shadow:
+        0 0 10px goldenrod,
+        0 0 20px goldenrod,
+        0 0 30px rgba(218, 165, 32, 0.8);
+}
+
+/* ========================================
+   BUTTON (Saturn)
+   ======================================== */
+
+.saturn-page button {
+    background-color: black;
+    color: goldenrod;
+    border: 2px solid goldenrod;
+
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* ========================================
+   FACT TEXT (Saturn)
+   ======================================== */
+
+.saturn-page p {
+    color: goldenrod;
+    text-align: center;
+}
+
+/* ========================================
+   Planet Image (Saturn)
+   ======================================== */
+
+.saturn-page #saturn {
+    border-radius: 50%;
+    box-shadow:
+        0 0 20px goldenrod,
+        0 0 40px goldenrod,
+        0 0 70px rgba(218, 165, 32, 0.5);
+}
+
 /*
 -----------------------------------------------------SOLAR SYSTEM PAGE STYLES-----------------------------------------------------
 */
+
+/* ========================================
+   HEADINGS (Solar System)
+   ======================================== */
+
+.solar-system-page h1 {
+    text-align: center;
+    color: whitesmoke;
+
+    text-shadow:
+        0 0 10px whitesmoke,
+        0 0 20px whitesmoke,
+        0 0 30px rgba(230, 169, 16, 0.8);
+}
+
+.solar-system-page h2 {
+    text-align: center;
+    color: whitesmoke;
+    animation: glow 2s infinite alternate;
+}
+
+.solar-system-page h3 {
+    text-align: center;
+    color: whitesmoke;
+}
+
+/* ========================================
+   HEADING GLOW ANIMATION (Solar System)
+   ======================================== */
+
+.solar-system-page h2 {
+    color: whitesmoke;
+    animation: solarSystemGlow 2s infinite alternate;
+}
+
+@keyframes solarSystemGlow {
+    from {
+        text-shadow:
+            0 0 5px whitesmoke,
+            0 0 10px whitesmoke,
+            0 0 15px rgba(230, 169, 16, 0.8);
+    }
+
+    to {
+        text-shadow:
+            0 0 20px whitesmoke,
+            0 0 30px whitesmoke,
+            0 0 40px rgba(230, 169, 16, 0.8);
+    }
+}
+
+/* ========================================
+   LINKS (Solar System)
+   ======================================== */
+
+.solar-system-page a {
+    display: block;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+.solar-system-page a:hover {
+    color: whitesmoke;
+
+    text-shadow:
+        0 0 10px whitesmoke,
+        0 0 20px whitesmoke,
+        0 0 30px rgba(230, 169, 16, 0.8);
+}
+
+/* ========================================
+   BUTTON (Solar System)
+   ======================================== */
+
+.solar-system-page button {
+    background-color: black;
+    color: whitesmoke;
+    border: 2px solid whitesmoke;
+
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* ========================================
+   FACT TEXT (Solar System)
+   ======================================== */
+
+.solar-system-page p {
+    color: whitesmoke;
+    text-align: center;
+}
+
+/* ========================================
+   Planet Image (Solar System)
+   ======================================== */
+
+.solar-system-page #saturn {
+    border-radius: 50%;
+    box-shadow:
+        0 0 20px whitesmoke,
+        0 0 40px whitesmoke,
+        0 0 70px rgba(230, 169, 16, 0.8);
+}
 
 /*
 -----------------------------------------------------SUN PAGE STYLES-----------------------------------------------------
@@ -744,6 +1027,19 @@ body{
     text-align: center;
 }
 
+/* ========================================
+   Planet Image (Uranus)
+   ======================================== */
+
+.uranus-page #uranus {
+    border-radius: 50%;
+    box-shadow:
+        0 0 20px rgb(0, 225, 255),
+        0 0 40px rgb(0, 225, 255),
+        0 0 70px rgba(0, 225, 255, 0.678);
+
+}
+
 /*
 -----------------------------------------------------VENUS PAGE STYLES-----------------------------------------------------
 */
@@ -840,4 +1136,17 @@ body{
 .venus-page p {
     color: rgb(255, 166, 0);
     text-align: center;
+}
+
+/* ========================================
+   Planet Image (Venus)
+   ======================================== */
+
+.venus-page #venus {
+    border-radius: 50%;
+    box-shadow:
+        0 0 20px rgb(255, 166, 0),
+        0 0 40px rgb(255, 166, 0),
+        0 0 70px rgba(255, 166, 0, 0.678);
+
 }

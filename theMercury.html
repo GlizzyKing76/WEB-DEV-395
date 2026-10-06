@@ -2,111 +2,36 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
         <title>Mercury</title>
-        <style>
-            body
-            {
-                background-image: url('https://wallpapercave.com/wp/wp9116463.jpg');
-                text-align: center;
-                color: white;
-                padding: 20px 20px;
-                background-size: cover;
-            }
-
-            h1
-            {
-                text-align: center;
-                color: burlywood;
-                text-shadow: 
-                 0 0 10px burlywood,
-                 0 0 20px burlywood,
-                 0 0 30px brown;
-            }
-
-            a
-            {
-                display: block;
-                color: white;
-                padding: 10px 20px;
-
-            }
-
-            a:hover 
-            {
-                color: burlywood;
-                text-shadow: 
-                 0 0 10px burlywood,
-                 0 0 20px burlywood,
-                 0 0 30px brown;
-            }
-
-            h2
-            {
-                text-align: center;
-                color: burlywood;
-                animation: glow 2s infinite alternate;
-            }
-
-            @keyframes glow {
-                from {
-                    text-shadow: 0 0 5px burlywood, 0 0 10px burlywood, 0 0 15px brown;
-                }
-                to {
-                    text-shadow: 0 0 20px burlywood, 0 0 30px burlywood, 0 0 40px brown;
-                }
-            }
-
-            h3
-            {
-                text-align: center;
-                color: burlywood;
-            }
-            
-            button
-            {
-                background-color: black;
-                color: burlywood;
-                border: 2px solid burlywood;
-                padding: 10px 20px;
-                font-size: 16px;
-                cursor: pointer;
-                transition: 0.3s;
-            }
-
-            p
-            {
-                color: burlywood;
-                text-align: center;
-            }
-
-
-
-        </style>
     </head>
-    <body>
+    <body class="mercury-page">
         <h1>Welcome to Mercury</h1>
-        <img id = 'mercury' src="https://upload.wikimedia.org/wikipedia/commons/8/84/Hubble_Visible_View_of_Jupiter.jpg" alt="Mercury" width="300" height="300">
-        <h2>Mercury is the smallest planet in our solar system.</h2>
-        <h3>Did you know?</h3>
-        <p id="fact"></p>
-        <button id="factButton">Random Fact About Mercury</button>
+        <img id = 'mercury' class = 'planet-image' src="https://science.nasa.gov/wp-content/uploads/2023/11/mercury-messenger-globe-pia15162.jpg?resize=50" alt="Mercury" width="300" height="300">
+        <h2>What is Mercury?</h2>
+        <b>
+            <p>
+                Mercury is the closest planet to the Sun, and it has a radius of 1,516 miles (2,439 kilometers). 
+                It is about 38% the size of Earth, making it the smallest planet in our solar system. 
+                Mercury is a rocky planet, and it has a solid surface made of rock and metal. 
+                The planet has a very thin atmosphere, which means that it cannot retain heat. 
+                As a result, Mercury experiences extreme temperature fluctuations, with daytime temperatures 
+                reaching up to 800 degrees Fahrenheit (427 degrees Celsius) and nighttime temperatures dropping to 
+                -290 degrees Fahrenheit (-179 degrees Celsius).
+            </p>
+        </b>
+        <h2>Mercury's Orbit</h2>
+        <img id = 'mercury_orbit' src="https://ts3.mm.bing.net/th?id=OIP.NPcO-y0DvjmY0EmmXoqD3AHaHa&pid=15.1" alt="Mercury Orbit" width="300" height="300">
+        <b>
+            <p>
+                Mercury has a very short orbital period, taking only 88 Earth days to complete one orbit around the Sun. 
+                This means that a year on Mercury is less than three months long! 
+                The planet also has a very slow rotation, taking about 59 Earth days to complete one rotation on its axis. 
+                This means that a day on Mercury is longer than its year!
+            </p>
+        </b>
         <a href="theSolarSystem.html">Go Back</a>
         <script>
-            const facts = [
-                "Mercury is the smallest planet in our solar system.",
-                "Mercury is the hottest planet in our solar system.",
-                "Mercury has no atmosphere.",
-                "Mercury is the fastest planet in our solar system.",
-                "Mercury is named after the Roman messenger god."
-            ];
-
-            const factButton = document.getElementById("factButton");
-            const fact = document.getElementById("fact");
-
-            factButton.addEventListener("click", function() {
-                const randomNumber = Math.floor(Math.random() * facts.length);
-                fact.textContent = facts[randomNumber];
-            });
         </script>
     </body>
 </html>

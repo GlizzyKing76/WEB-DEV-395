@@ -7,30 +7,36 @@
     </head>
     <body class="jupiter-page">
         <h1>Welcome to Jupiter</h1>
-        <img id = 'jupiter' src="https://upload.wikimedia.org/wikipedia/commons/8/84/Hubble_Visible_View_of_Jupiter.jpg" alt="Jupiter" width="300" height="300">
-        <h2>Jupiter is a Gas Giant</h2>
-        <h3>Did you know?</h3>
-        <p id="fact"></p>
-        <button id="factButton">Random Fact About Jupiter</button>
+        <img id = 'jupiter' class = 'planet-image' src="https://upload.wikimedia.org/wikipedia/commons/8/84/Hubble_Visible_View_of_Jupiter.jpg" alt="Jupiter" width="300" height="300">
+        <h2>What is Jupiter?</h2>
+        <b>
+            <p>
+                Jupiter is the biggest planet in our solar system, it has a radius of 43,440.7 miles (69,911 kilometers) and is about
+                11 times wider than Earth. It is a gas giant, which means it is mostly made of hydrogen and helium.
+                Jupiter's composition is similar to that of the Sun, which is why it is sometimes referred to as a "failed star." This also
+                gives Jupiter the largest ocean in our Solar System, only that it is not made of water, but of liquid metallic hydrogen.
+
+            </p>
+            <p>
+                Since Jupiter is mostly made of gas, it doesn't have a solid surface like Earth. The planet is mostly just swirling
+                clouds of gas and liquid. However, it is believed that Jupiter has a solid core made of rock and metal, 
+                which is surrounded by a layer of liquid metallic hydrogen. A spacecraft would not be able to land on Jupiter,
+                it would just sink into the planet's atmosphere and eventually be crushed by the intense pressure.
+            </p>
+        </b>
+        <h2>Jupiter's Eye</h2>
+        <img id = 'jupiter_eye' src="https://d2xkkdgjnsfvb0.cloudfront.net/Vault/Thumb?VaultID=10935&Interlaced=1&Mode=R&ResX=960&OutputFormat=jpg&Quality=75&ts=1669040289" width="300" height="300">
+        <b>
+            <p>
+                Jupiter is known for its Great Red Spot, which is a giant storm that has been raging for at least 400 years.
+                The storm is so big that it could fit three Earths inside it. The Great Red Spot is a high-pressure region in Jupiter's
+                atmosphere, and it is believed to be a result of the planet's fast rotation and the complex interactions between its
+                atmosphere and magnetic field. 
+            </p>
+        </b>
         <a href="theSolarSystem.html">Go Back</a>
         <script>
-            const facts = [
-                "Jupiter is the largest planet in our solar system.",
-                "Jupiter has a prominent Great Red Spot, a giant storm.",
-                "Jupiter has at least 79 moons.",
-                "Jupiter is a gas giant, mostly composed of hydrogen and helium.",
-                "Jupiter has a faint ring system."
-            ];
 
-
-            const factButton = document.getElementById("factButton");
-            const fact = document.getElementById("fact");
-
-
-            factButton.addEventListener("click", function() {
-                const randomNumber = Math.floor(Math.random() * facts.length);
-                fact.textContent = facts[randomNumber];
-            });
         </script>
     </body>
 </html>
