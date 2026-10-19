@@ -3,126 +3,40 @@
     <head>
         <meta charset="utf-8">
         <title>Uranus</title>
-        <style>
-            a 
-            {
-                text-align: center;
-                display: block;
-                color: white;
-                text-decoration: none;
-                transition: 0.3s;
-                padding: 10px 20px;
-            }
-
-            a:hover 
-            {
-                color: rgb(0, 225, 255);
-                text-shadow: 
-                 0 0 10px rgb(0, 225, 255),
-                 0 0 20px rgba(0, 225, 255, 0.678);
-            }
-
-            body
-            {
-                background-image: url('https://images.unsplash.com/photo-1498116069452-debf99cb30f0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMjA3fDB8MXxzZWFyY2h8M3x8YmxhY2slMjBzcGFjZXx8MHx8fHwxNjI1MTU0Nzk3&ixlib=rb-1.2.1&q=80&w=1080');
-                text-align: center;
-                color: white;
-                padding: 20px 20px;
-            }
-
-            button
-            {
-                background-color: black;
-                color: rgb(0, 225, 255);
-                border: 2px solid rgb(0, 225, 255);
-                padding: 10px 20px;
-                font-size: 16px;
-                cursor: pointer;
-                transition: 0.3s;
-            }
-
-            h1
-            {
-                text-align: center;
-                color: rgb(0, 225, 255);
-
-                text-shadow: 
-                 0 0 10px rgb(0, 225, 255),
-                 0 0 20px rgba(0, 225, 255, 0.678);
-            }
-
-
-            h2
-            {
-                text-align: center;
-                color: rgb(0, 225, 255);
-                animation: glow 2s infinite alternate;
-            }
-
-            @keyframes glow {
-                from {
-                    text-shadow: 0 0 5px rgb(0, 225, 255), 0 0 10px rgb(0, 225, 255), 0 0 15px rgba(0, 225, 255, 0.678);
-                }
-                to {
-                    text-shadow: 0 0 20px rgb(0, 225, 255), 0 0 30px rgb(0, 225, 255), 0 0 40px rgba(0, 225, 255, 0.678);
-                }
-            }
-
-            h3
-            {
-                text-align: center;
-                color: rgb(0, 225, 255);
-            }
-
-            h4
-            {
-                
-                text-align: center;
-                color: rgb(0, 225, 255);
-                font-size: 20px;
-            }
-
-            p
-            {
-                text-align: center;
-                color: rgb(0, 225, 255);
-            }
-
-            img
-            {
-                display: block;
-                margin: 0 auto;
-                transition: transform 0.3s;
-            }
-
-        </style>
+        <link rel="stylesheet" href="style.css">
     </head>
-    <body>
+    <body class = 'uranus-page'>
         <h1>Welcome to Uranus</h1>
         <img id="uranus" src="https://static01.nyt.com/images/2023/04/04/multimedia/23sci-uranus-01-vftp/23sci-uranus-01-vftp-mediumSquareAt3X.jpg" alt="Uranus" width="300" height="300">
         <h4>Click to show Uranus' rings!</h4>
-        <h2>Uranus is an Ice Giant</h2>
-        <h3>Did you know?</h3>
-        <p id="fact"></p>
-        <button id="factButton">Random Fact About Uranus</button>
-        <a href="theSolarSystem.html">Go Back</a>
+        <h2>What is Uranus?</h2>
+        <p>
+            Uranus was the first planet discovered with a telescope, and was discovered by William Herschel in 1781. It is named after the Greek god of the sky, Uranus.
+            Uranus is an ice giant, it is surrounded by 13 known rings, and has 28 small moons. It is the seventh planet form the Sun, and is the third largest planet in
+            our solar system. It rotates at a nearly 90-degree angle, which means it rotates on its side. Uranus is the coldest planet in our solar system, with an average temperature of -224 degrees Celsius.
+        </p>
+        <p>
+            Uranus has an equatorial diameter of 51,118 kilometers (31,763 miles), it is four times the diameter of Earth.
+            It has an average distance of 1.8 billion miles (2.9 billion kilometers) from the Sun, and takes 84 Earth years to complete one orbit around the Sun. 
+            Uranus has a very thin atmosphere, which is made up of hydrogen, helium, and methane. The methane in the atmosphere gives Uranus its blue color.
+        </p>
+        <h2>Uranu's Rings</h2>
+        <img id = '' src="" alt="" width="300" height="300">
+        <p>
+
+        </p>
+        <nav aria-label="Main navigation">
+            <a href="theSolarSystem.html">Home</a>
+            <a href="theSun.html">Sun</a>
+            <a href="theEarth.html">Earth</a>
+            <a href="theMercury.html">Mercury</a>
+            <a href="theVenus.html">Venus</a>
+            <a href="theMars.html">Mars</a>
+            <a href="theJupiter.html">Jupiter</a>
+            <a href="theSaturn.html">Saturn</a>
+            <a href="theNeptune.html">Neptune</a>
+        </nav>
         <script>
-            const facts = [
-                "Uranus is the seventh planet from the Sun.",
-                "Uranus is an ice giant and is the least massive of the gas giants.",
-                "Uranus has a unique sideways rotation, causing its poles to face the Sun.",
-                "Uranus has a system of rings, similar to Saturn's rings.",
-                "Uranus has 27 known moons."
-            ];
-
-            const factButton = document.getElementById("factButton");
-            const fact = document.getElementById("fact");
-
-            factButton.addEventListener("click", function() {
-                const randomNumber = Math.floor(Math.random() * facts.length);
-                fact.textContent = facts[randomNumber];
-            })
-
             const uranus = document.getElementById('uranus');
             const normalUranus = 'https://static01.nyt.com/images/2023/04/04/multimedia/23sci-uranus-01-vftp/23sci-uranus-01-vftp-mediumSquareAt3X.jpg';
             const uranusWithRings = 'https://cdn.mos.cms.futurecdn.net/vFL2StpmgYzT9QtZMbbgWS.jpeg';

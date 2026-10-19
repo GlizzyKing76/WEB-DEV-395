@@ -3,143 +3,44 @@
     <head>
         <meta charset="utf-8">
         <title>The Earth</title>
-        <style>
-            a 
-            {
-                text-align: center;
-                display: block;
-                color: white;
-                text-decoration: none;
-                transition: 0.3s;
-                padding: 10px 20px;
-            }
-
-            a:hover 
-            {
-                color: cyan;
-                text-shadow: 
-                 0 0 10px cyan,
-                 0 0 20px blue;
-            }
-
-            body
-            {
-                background-image: url('https://wallpapers.com/images/hd/sky-view-horizon-9b49q438xfkb5e6u.jpg');
-                text-align: center;
-                color: white;
-                padding: 20px 20px;
-            }
-
-            button
-            {
-                background-color: black;
-                color: lightblue;
-                border: 2px solid lightblue;
-                padding: 10px 20px;
-                font-size: 16px;
-                cursor: pointer;
-                transition: 0.3s;
-            }
-
-            h1
-            {
-                text-align: center;
-                color: lightblue;
-
-                text-shadow: 
-                 0 0 10px lightblue,
-                 0 0 20px lightblue,
-                 0 0 30px blue;
-            }
-
-
-            h2
-            {
-                text-align: center;
-                color: lightblue;
-                animation: glow 2s infinite alternate;
-            }
-
-            @keyframes glow {
-                from {
-                    text-shadow: 0 0 5px lightblue, 0 0 10px lightblue, 0 0 15px blue;
-                }
-                to {
-                    text-shadow: 0 0 20px lightblue, 0 0 30px lightblue, 0 0 40px blue;
-                }
-            }
-
-            h3
-            {
-                text-align: center;
-                color: lightblue;
-            }
-
-            p
-            {
-                text-align: center;
-                color: lightblue;
-            }
-
-            #earth.spinning 
-            {
-                animation: spin 5s linear infinite;
-            }
-
-            @keyframes spin {
-                from {
-                    transform: rotate(0deg);
-                }
-                to {
-                    transform: rotate(360deg);
-                }
-            }
-            
-            img
-            {
-                display: block;
-                margin: 0 auto;
-                transition: transform 0.3s;
-            }
-
-            #earth
-            {
-                border-radius: 50%;
-                box-shadow:
-                    0 0 20px lightblue,
-                    0 0 40px blue,
-                    0 0 70px rgba(0, 100, 255, 0.5);
-                cursor: pointer;    
-            }
-
-        </style>
+        <link rel="stylesheet" href="style.css">
     </head>
-    <body>
+    <body class="earth-page">
         <h1>Welcome to Earth</h1>
-        <!--<a href="day 2.html">Go Back</a>-->
         <img id="earth" src="https://cdn.pixabay.com/photo/2011/12/13/14/28/earth-11009_1280.jpg" alt="The Earth" width="300" height="300">
-        <h2>The Earth is our home planet</h2>
-        <h3>Did you know?</h3>
-        <p id="fact"></p>
-        <button id="factButton">Random Fact About Earth</button>
-        <a href="theSolarSystem.html">Go Back</a>
+        <h2>What is Earth?</h2>
+        <p>
+            Earth is the biggest terrestrial planet in our solar system and the fifth largest planet overall.
+            It has an average distance of 93 million miles (150 million kilometers) from the Sun and is the only planet known to support life.
+            Earth orbits the sun once every 365.25 days, which is why we have a leap year every four years to account for the extra quarter of a day,
+            it also completes one rotation every 23.9 hours. Earth has an axis of 23.4 degrees, which is responsible for our yearly seasons.
+        </p>
+        <p>
+            During part of the year, the Northern Hemisphere is tilted toward the Sun, while the Southern Hemisphere is tilted away from it.
+            This causes the Northern Hemisphere to experience summer while the Southern Hemisphere experiences winter, and vice versa.
+            The Earth is composed of three main layers: the crust, the mantle, and the core. The crust is the outermost layer, which is made up of solid rock and is where we live.
+            The earth's core is made up of two parts: the outer core, which is liquid, and the inner core, which is solid. The core is responsible for generating Earth's magnetic field, which protects us from harmful solar radiation.
+        </p>
+        <h2>Our Moon</h2>
+        <img id = 'moon' src="https://imageio.forbes.com/specials-images/imageserve/649c36f19989cde982e45cbe/0x0.jpg?format=jpg&width=1200" alt="The Moon" width="300" height="300">
+        <p>
+            The moon is Earth's only natural satellite and is the fifth largest moon in the solar system. It has a diameter of 2,159 miles (3,474 kilometers) and is about 1/4 the size of Earth.
+            The moon is about 238,855 miles (384,400 kilometers) away from Earth and takes about 27.3 days to complete one orbit around our planet.
+            Some moons are bits of rocks that were captured by a planet's gravity, while others are thought to have formed from the same material as their parent planet.
+            But our moon is likely the result of a collision between Earth and a Mars-sized object called Theia, which occurred about 4.5 billion years ago.
+        </p>
+        <nav aria-label="Main navigation">
+            <a href="theSolarSystem.html">Home</a>
+            <a href="theSun.html">Sun</a>
+            <a href="theMercury.html">Mercury</a>
+            <a href="theVenus.html">Venus</a>
+            <a href="theMars.html">Mars</a>
+            <a href="theJupiter.html">Jupiter</a>
+            <a href="theSaturn.html">Saturn</a>
+            <a href="theUranus.html">Uranus</a>
+            <a href="theNeptune.html">Neptune</a>
+        </nav>
         <script>
-            const facts = [
-                "The Earth is the only planet known to support life.",
-                "About 71% of the Earth's surface is covered with water.",
-                "The Earth has a molten core that generates its magnetic field.",
-                "The Earth's atmosphere protects us from harmful solar radiation.",
-                "The Earth orbits the Sun at an average distance of about 93 million miles."
-            ];
-
-            const factButton = document.getElementById("factButton");
-            const fact = document.getElementById("fact");
-
-            factButton.addEventListener("click", function() {
-                const randomNumber = Math.floor(Math.random() * facts.length);
-                fact.textContent = facts[randomNumber];
-            })
-
             const earth = document.getElementById("earth");
             earth.addEventListener("click", function() {
                 earth.classList.toggle("spinning");

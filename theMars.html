@@ -3,124 +3,39 @@
     <head>
         <meta charset="utf-8">
         <title>Mars</title>
-        <style>
-            body
-            {
-                background-image: url('https://wallpapercave.com/wp/wp9116463.jpg');
-                text-align: center;
-                color: white;
-                padding: 20px 20px;
-                background-size: cover;
-            }
-
-            h1
-            {
-                text-align: center;
-                color: orange;
-                text-shadow: 
-                 0 0 10px orange,
-                 0 0 20px orange,
-                 0 0 30px yellow;
-            }
-
-            a
-            {
-                display: block;
-                color: white;
-                padding: 10px 20px;
-
-            }
-
-            a:hover 
-            {
-                color: orange;
-                text-shadow: 
-                 0 0 10px orange,
-                 0 0 20px yellow;
-            }
-
-            h2
-            {
-                text-align: center;
-                color: orange;
-                animation: glow 2s infinite alternate;
-            }
-
-            @keyframes glow {
-                from {
-                    text-shadow: 0 0 5px orange, 0 0 10px orange, 0 0 15px yellow;
-                }
-                to {
-                    text-shadow: 0 0 20px orange, 0 0 30px orange, 0 0 40px yellow;
-                }
-            }
-
-            h3
-            {
-                text-align: center;
-                color: orange;
-            }
-            
-            button
-            {
-                background-color: black;
-                color: orange;
-                border: 2px solid orange;
-                padding: 10px 20px;
-                font-size: 16px;
-                cursor: pointer;
-                transition: 0.3s;
-            }
-
-            p
-            {
-                color: orange;
-                text-align: center;
-            }
-
-            #mars
-            {
-                border-radius: 50%;
-                cursor: pointer;
-                transition: 1s;    
-            }
-
-            #mars.dustStorm
-            {
-                filter: brightness(0.7) sepia(0.5);
-                box-shadow:
-                    0 0 20px orange,
-                    0 0 40px orangered,
-                    0 0 70px red;
-            }
-
-        </style>
+        <link rel="stylesheet" href="style.css">
     </head>
-    <body>
+    <body class="mars-page">
         <h1>Welcome to Mars</h1>
         <img id = 'mars' src="https://www.nasa.gov/wp-content/uploads/2024/05/1-viking-mars-globe.jpg?w=1536&format=jpeg" alt="Mars" width="300" height="300">
-        <h2>Mars is Humanity's Next Frontier</h2>
-        <h3>Did you know?</h3>
-        <p id="fact"></p>
-        <button id="factButton">Random Fact About Mars</button>
-        <a href="theSolarSystem.html">Go Back</a>
+        <h2>What is Mars?</h2>
+        <p>
+            Mars is about half the size of Earth, it has a radius of 2106 miles (3390 kilometers), and it has an
+            average distance of 142 million miles (228 million kilometers) from the sun. Mars has a similar rotation
+            duration as Earth, Earth being 23.9 hours and Mars being 24.6 hours. Mars has tilt of 25 degrees which
+            is another close similarity it has with Earth, Earth has a 23.4 degree tilt. Mars has a temperatur that
+            can go as high as 70 degrees Fahrenheit (20 degrees Celsius) to as low as -225 degrees fahrenheit (-153 degrees celsius)
+        </p>
+        <h2>Mars' Moons</h2>
+        <img id = 'phobos' src="https://science.nasa.gov/wp-content/uploads/2017/11/phobos-pia10368-1920x1200-1.jpg?w=1920" alt="Phobos" width="300" height="300">
+        <img id = 'deimos' src="https://science.nasa.gov/wp-content/uploads/2017/11/deimos-1920x1200-1.jpg?w=4096&format=jpeg" alt="Deimos" width="300" height="300">
+        <p>
+            Mars has two moons, Phobos and Deimos that may actually be captured asteroids. Phobos is the larger of the two
+            and is heavily cratered, it is slowling moving towards mars and will likely crash into the planet or break apart
+            in the next 50 years. Deimos is the smaller of the two and is covered in loose dirt, it is also about half as big as Phobos
+        </p>
+        <nav aria-label="Main navigation">
+            <a href="theSolarSystem.html">Home</a>
+            <a href="theSun.html">Sun</a>
+            <a href="theEarth.html">Earth</a>
+            <a href="theMercury.html">Mercury</a>
+            <a href="theVenus.html">Venus</a>
+            <a href="theJupiter.html">Jupiter</a>
+            <a href="theSaturn.html">Saturn</a>
+            <a href="theUranus.html">Uranus</a>
+            <a href="theNeptune.html">Neptune</a>
+        </nav>    
         <script>
-            const facts = [
-                "Mars has a thin atmosphere and is mostly composed of carbon dioxide.",
-                "Mars has the largest volcano in the solar system, Olympus Mons.",
-                "Mars has two small moons, Phobos and Deimos.",
-                "Mars is often called the 'Red Planet' due to iron oxide on its surface.",
-                "Mars has the largest canyon in the solar system, Valles Marineris."
-            ];
-
-            const factButton = document.getElementById("factButton");
-            const fact = document.getElementById("fact");
-
-            factButton.addEventListener("click", function() {
-                const randomNumber = Math.floor(Math.random() * facts.length);
-                fact.textContent = facts[randomNumber];
-            });
-
             const mars = document.getElementById("mars");
             mars.addEventListener("click", function() {
                 mars.classList.toggle("dustStorm");

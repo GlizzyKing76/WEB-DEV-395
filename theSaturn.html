@@ -8,27 +8,34 @@
     <body class="solar-system-page">
         <h1>Welcome to Saturn</h1>
         <img id = 'saturn' src="https://solarsystem.nasa.gov/system/stellar_items/image_files/38_saturn_1600x900.jpg" alt="Saturn" width="500" height="300">
-        <h2>Saturn is a Gas Giant</h2>
-        <h3>Did you know?</h3>
-        <p id="fact"></p>
-        <button id="factButton">Random Fact About Saturn</button>
-        <a href="theSolarSystem.html">Go Back</a>
+        <h2>What is Saturn?</h2>
+        <p>
+            Saturn is a gas giant much like Jupiter, it is a massive ball made of mostly hydrogen and helium. Saturn is
+            9 times wider than Earth with an equatorial diameter of 74897 miles (120500 kilometers) and it has an average distance 
+            of 886 million miles (1.4 billion kilometers) from the sun. Saturn has a rotation duration of 10.7 hours but it takes about
+            29.4 Earth years for it to complete its orbit around the Sun. It has an axis tilt of 26.73 degrees which is similar to Earth's
+            23.4 degree tilt.
+        </p>
+        <h2>Saturn's Rings</h2>
+        <img id = 'saturn_rings' src="https://science.nasa.gov/wp-content/uploads/2023/07/rings_diagram_nolables-1.jpg?w=4096&format=jpeg" alt="Saturn Rings" width="500" height="300">
+        <p>
+            Saturn's rings are made of billions of small chunks of ice and rock, its particles mostly range from tiny, dust-sized icy grains, to
+            house-sized chunks. They extent up to 175000 miles (282000 kilometers) from the planet however it's vertical height is as small as 30 feet (10 meters)
+            in the main rings
+        </p>
+        <nav aria-label="Main navigation">
+            <a href="theSolarSystem.html">Home</a>
+            <a href="theSun.html">Sun</a>
+            <a href="theEarth.html">Earth</a>
+            <a href="theMercury.html">Mercury</a>
+            <a href="theVenus.html">Venus</a>
+            <a href="theMars.html">Mars</a>
+            <a href="theJupiter.html">Jupiter</a>
+            <a href="theUranus.html">Uranus</a>
+            <a href="theNeptune.html">Neptune</a>
+        </nav>
         <script>
-            const facts = [
-                "Saturn is the largest planet in our solar system.",
-                "Saturn has a prominent ring system.",
-                "Saturn has at least 82 moons.",
-                "Saturn is a gas giant, mostly composed of hydrogen and helium.",
-                "Saturn has a faint ring system."
-            ];
 
-            const factButton = document.getElementById("factButton");
-            const fact = document.getElementById("fact");
-
-            factButton.addEventListener("click", function() {
-                const randomNumber = Math.floor(Math.random() * facts.length);
-                fact.textContent = facts[randomNumber];
-            });
         </script>
     </body>
 </html>
