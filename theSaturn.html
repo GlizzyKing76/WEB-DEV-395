@@ -5,7 +5,7 @@
         <link rel="stylesheet" href="style.css">
         <title>Saturn</title>
     </head>
-    <body class="solar-system-page">
+    <body class="saturn-page">
         <h1>Welcome to Saturn</h1>
         <img id = 'saturn' src="https://solarsystem.nasa.gov/system/stellar_items/image_files/38_saturn_1600x900.jpg" alt="Saturn" width="500" height="300">
         <h2>What is Saturn?</h2>
@@ -23,6 +23,15 @@
             house-sized chunks. They extent up to 175000 miles (282000 kilometers) from the planet however it's vertical height is as small as 30 feet (10 meters)
             in the main rings
         </p>
+        <h2>What Would You Weigh on Saturn?</h2>
+        <p>Enter your weight on Earth to calculate your approximate weight on Saturn!</p>
+
+        <label for="earthWeight">Your Earth weight (in pounds):</label>
+        <input type="number" id="earthWeight" min="1" max="1000" placeholder="Enter your weight">
+
+        <button id="saturnButton">Calculate My Saturn Weight</button>
+
+        <p id="saturnResult">Your result will appear here!</p>
         <nav aria-label="Main navigation">
             <a href="theSolarSystem.html">Home</a>
             <a href="theSun.html">Sun</a>
@@ -32,10 +41,30 @@
             <a href="theMars.html">Mars</a>
             <a href="theJupiter.html">Jupiter</a>
             <a href="theUranus.html">Uranus</a>
-            <a href="theNeptune.html">Neptune</a>
+            <a href="theMoon.html">The Moon</a>
         </nav>
         <script>
+            const saturnButton = document.getElementById("saturnButton");
 
+            saturnButton.addEventListener("click", function() {
+                const earthWeight = Number(
+                    document.getElementById("earthWeight").value
+                );
+
+                const saturnResult = document.getElementById("saturnResult");
+
+                if (earthWeight <= 0 || !Number.isFinite(earthWeight)) {
+                    saturnResult.textContent = "Please enter a valid weight!";
+                    return;
+                }
+
+                const saturnWeight = earthWeight * 1.06;
+
+                saturnResult.textContent =
+                    "You would weigh approximately " +
+                    saturnWeight.toFixed(1) +
+                    " pounds on Saturn!";
+            });
         </script>
     </body>
 </html>

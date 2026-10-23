@@ -3,123 +3,55 @@
     <head>
         <meta charset="utf-8">
         <title>The Moon</title>
-        <style>
-            body
-            {
-                background-image: url('https://tse3.mm.bing.net/th/id/OIP.reLD3MpFTDV76_QJohhwswHaE8?r=0&rs=1&pid=ImgDetMain&o=7&rm=3');
-                text-align: center;
-                color: white;
-                padding: 20px 20px;
-            }
-
-            h1
-            {
-                text-align: center;
-                color: lightgray;
-                text-shadow: 
-                 0 0 10px lightgray,
-                 0 0 20px lightgray,
-                 0 0 30px gray;
-            }
-
-            a
-            {
-                display: block;
-                color: white;
-                padding: 10px 20px;
-            }
-
-            a:hover 
-            {
-                color: lightgray;
-                text-shadow: 
-                 0 0 10px lightgray,
-                 0 0 20px gray;
-            }
-
-            h2
-            {
-                text-align: center;
-                color: lightgray;
-                animation: glow 2s infinite alternate;
-            }
-
-            @keyframes glow {
-                from {
-                    text-shadow: 0 0 5px lightgray, 0 0 10px lightgray, 0 0 15px gray;
-                }
-                to {
-                    text-shadow: 0 0 20px lightgray, 0 0 30px lightgray, 0 0 40px gray;
-                }
-            }
-
-            h3
-            {
-                text-align: center;
-                color: lightgray;
-            }
-            
-            button
-            {
-                background-color: black;
-                color: lightgray;
-                border: 2px solid lightgray;
-                padding: 10px 20px;
-                font-size: 16px;
-                cursor: pointer;
-                transition: 0.3s;
-            }
-
-            p
-            {
-                color: lightgray;
-                text-align: center;
-            }
-        </style>
+        <link rel="stylesheet" href="style.css">
     </head>
-    <body>
-        <h1>Welcome to the Moon</h1>
-        <img id="moon" src="https://imageio.forbes.com/specials-images/imageserve/649c36f19989cde982e45cbe/0x0.jpg?format=jpg&width=1200" alt="The Moon" width="300" height="300">
-        <h2>The Moon is Earth's Only Natural Satellite</h2>
-        <h3>Did you know?</h3>
-        <button id="factButton">Random Fact About the Moon</button>
-        <p id="fact"></p>
-        <a href="theSolarSystem.html">Go Back</a>
+    <body class ="moon-page">
+        <h1>Welcome to Our Moon</h1>
+        <img id = 'moon' class = "planet-image" src="https://imageio.forbes.com/specials-images/imageserve/649c36f19989cde982e45cbe/0x0.jpg?format=jpg&width=1200 alt="Moon" width="300" height="300">
+        <h2>What is Our Moon?</h2>
+        <p>
+            Our moon has a radius of about 1,080 miles (1,740 kilometers), which is less than a third of the Earth's width.
+            The moon has a very thin and weak atmosphere and does not provide any protection from the Sun's radiation. It's surface
+            has a temperature that reaches about 260 degrees Fahrenheit (127 degrees Celsius) when in full Sun, but in darkness, the temperatures plummet to about -280 degrees Fahrenheit (-173 degrees Celsius)
+            The Moon has a core, mantle, and crust. Its core, much like Earth has a solid and a liquid core. The solid part
+            is 149 miles (240 kilometers) in radius and the liquid part, which surrounds the solid part, is about 56 miles (90 kilometers) thick.
+        </p>
+        <h2></h2>
+        <img id = 'moon_water' src="https://assets.science.nasa.gov/dynamicimage/assets/science/psd/lunar-science/internal_resources/581/Observations_Of_Lunar_Debris_Reveal_More.jpg?w=1280&h=720&fit=clip&crop=faces%2Cfocalpoint" alt="Moon Water" width="500" height="300">
+        <p>
+            The first discovery of water on the Moon was made in 2008 by the Indian mission Chandrayaan-1. It detected hydroxyl molecules spread across the lunar surface and concentrated at the poles.
+            In October 2020, NASA's Stratospheric Observatory for Infrared Astronomy (SOFIA) confirmed, for the first time, water on the sunlit surface of the Moon.
+        </p>
+        <nav aria-label="Main navigation">
+            <a href="theSolarSystem.html">Home</a>
+            <a href="theSun.html">Sun</a>
+            <a href="theEarth.html">Earth</a>
+            <a href="theMercury.html">Mercury</a>
+            <a href="theVenus.html">Venus</a>
+            <a href="theMars.html">Mars</a>
+            <a href="theJupiter.html">Jupiter</a>
+            <a href="theSaturn.html">Saturn</a>
+            <a href="theUranus.html">Uranus</a>
+        </nav>
         <script>
-            const facts = [
-                "the Moon is about 1/4 the size of Earth.",
-                "the Moon is about 238,855 miles away from Earth.",
-                "the Moon has no atmosphere, which means there is no air to breathe.",
-                "the Moon has a gravitational pull that is 1/6th of Earth's.",
-                "the Moon affects the tides on Earth."
-            ];
-
-            const factButton = document.getElementById("factButton");
-            const fact = document.getElementById("fact");
-
-            factButton.addEventListener("click", function() {
-                const randomNumber = Math.floor(Math.random() * facts.length);
-                fact.textContent = facts[randomNumber];
-            });
-
             const moon = document.getElementById("moon");
 
             const moonPhases = [
-                <!-- New Moon -->
+                //New Moon
                 "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/New_Moon.jpg/1280px-New_Moon.jpg",
-                <!-- Waxing Crescent -->
+                //Waxing Crescent
                 "https://th.bing.com/th/id/R.b07c214d99e47b2e74d13553e6ca236e?rik=LGwl%2fQv0sJFihg&pid=ImgRaw&r=0",
-                <!-- First Quarter -->
+                //First Quarter
                 "https://th.bing.com/th/id/R.4d3eb12bd770bb69de81a284868ca54c?rik=VpOmWTugvc%2bTaA&riu=http%3a%2f%2fd1jqu7g1y74ds1.cloudfront.net%2fwp-content%2fuploads%2f2010%2f06%2fFlying-Across-the-Moon1.jpg&ehk=9kNSVu1VEaPESqG27jnlGmYEm0VdvCSkRqyithFiLPc%3d&risl=&pid=ImgRaw&r=0",
-                <!-- Waxing Gibbous -->
+                //Waxing Gibbous
                 "https://spaceandtelescope.com/wp-content/uploads/2023/03/Waxing-gibbous-moon.jpg",
-                <!-- Full Moon -->
+                //Full Moon
                 "https://imageio.forbes.com/specials-images/imageserve/649c36f19989cde982e45cbe/0x0.jpg?format=jpg&width=1200",
-                <!-- Waning Gibbous -->
+                //Waning Gibbous
                 "https://th.bing.com/th/id/R.24cf9deecd0b96e3590ec0d6362e8c2e?rik=HKfKU9VLyxzsUg&riu=http%3a%2f%2fastronomy.robpettengill.org%2fphotos%2fslides%2fMoon2820WanGib140816.jpg&ehk=s%2bzLS85MuRHI%2fDxQw0%2fsLfs4kM2%2b6ioydyHl6pwfY34%3d&risl=&pid=ImgRaw&r=0",
-                <!-- Third Quarter -->
+                //hird Quarter
                 "https://images.fineartamerica.com/images-medium-large-5/third-quarter-moon-nasas-scientific-visualization-studioscience-photo-library.jpg",
-                <!-- Waning Crescent -->
+                //Waning Crescent
                 "https://images.fineartamerica.com/images-medium-large-5/the-23-day-old-waning-crescent-moon-alan-dyer.jpg"
             ];
 

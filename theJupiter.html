@@ -14,15 +14,19 @@
             11 times wider than Earth. It is a gas giant, which means it is mostly made of hydrogen and helium.
             Jupiter's composition is similar to that of the Sun, which is why it is sometimes referred to as a "failed star." This also
             gives Jupiter the largest ocean in our Solar System, only that it is not made of water, but of liquid metallic hydrogen.
-        </p>
-        <p>
-            Since Jupiter is mostly made of gas, it doesn't have a solid surface like Earth. The planet is mostly just swirling
-            clouds of gas and liquid. However, it is believed that Jupiter has a solid core made of rock and metal, 
-            which is surrounded by a layer of liquid metallic hydrogen. A spacecraft would not be able to land on Jupiter,
-            it would just sink into the planet's atmosphere and eventually be crushed by the intense pressure.
+            A spacecraft would not be able to land on Jupiter, it would just sink into the planet's atmosphere and eventually be crushed by the intense pressure.
         </p>
         <h2>Jupiter's Eye</h2>
-        <img id = 'jupiter_eye' src="https://d2xkkdgjnsfvb0.cloudfront.net/Vault/Thumb?VaultID=10935&Interlaced=1&Mode=R&ResX=960&OutputFormat=jpg&Quality=75&ts=1669040289" width="300" height="300">
+        <img
+            id="jupiter_eye"
+            src="https://assets.science.nasa.gov/dynamicimage/assets/science/psd/solar/2023/09/g/grs_animation_1200.jpg?w=1200&h=690&fit=clip&crop=faces%2Cfocalpoint"
+            alt="Jupiter's Great Red Spot"
+            onclick="toggleStorm()"
+            style="cursor: pointer;"
+            width="400"
+            height="300"
+            >
+        <p>Click the Great Red Spot to watch it swirl!</p>
         <p>
             Jupiter is known for its Great Red Spot, which is a giant storm that has been raging for at least 400 years.
             The storm is so big that it could fit three Earths inside it. The Great Red Spot is a high-pressure region in Jupiter's
@@ -38,10 +42,26 @@
             <a href="theMars.html">Mars</a>
             <a href="theSaturn.html">Saturn</a>
             <a href="theUranus.html">Uranus</a>
-            <a href="theNeptune.html">Neptune</a>
+            <a href="theMoon.html">The Moon</a>
         </nav>
         <script>
+            function toggleStorm() {
+                    const storm = document.getElementById("jupiter_eye");
 
+                    const stillImage =
+                        "https://assets.science.nasa.gov/dynamicimage/assets/science/psd/solar/2023/09/g/grs_animation_1200.jpg?w=1200&h=690&fit=clip&crop=faces%2Cfocalpoint";
+
+                    const animatedImage =
+                        "https://assets.science.nasa.gov/content/dam/science/psd/solar/2023/09/p/i/a/PIA22178.gif";
+
+                    if (storm.dataset.animated === "true") {
+                        storm.src = stillImage;
+                        storm.dataset.animated = "false";
+                    } else {
+                        storm.src = animatedImage;
+                        storm.dataset.animated = "true";
+                    }
+                }
         </script>
     </body>
 </html>

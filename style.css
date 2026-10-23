@@ -297,6 +297,30 @@ nav a:hover {
         0 0 70px rgba(139, 69, 19, 0.5);
 }
 
+/* Jupiter's Great Red Spot swirling effect */
+#jupiter_eye {
+    cursor: pointer;
+    transition: transform 1.5s ease-in-out;
+    transform-origin: center center;
+}
+
+#jupiter_eye.swirling {
+    animation: jupiterSwirl 1.5s ease-in-out;
+}
+
+@keyframes jupiterSwirl{
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+
+    50% {
+        transform: rotate(360deg) scale(0.25);
+    }
+
+    100% {
+        transform: rotate(720deg) scale(1);
+    }
+}
 /*
 -----------------------------------------------------MARS PAGE STYLES-----------------------------------------------------
 */
@@ -537,115 +561,111 @@ nav a:hover {
 }
 
 /*
------------------------------------------------------NEPTUNE PAGE STYLES-----------------------------------------------------
+-----------------------------------------------------THE MOON PAGE STYLES-----------------------------------------------------
 */
 
 /* ========================================
-   HEADINGS (Neptune)
+   HEADINGS (The Moon)
    ======================================== */
 
-.neptune-page h1 {
-    text-align: center;
-    color: blue;
-
+.moon-page h1 {
+    color: lightgray;
     text-shadow:
-        0 0 10px blue,
-        0 0 20px blue,
-        0 0 30px rgb(26, 47, 233);
+        0 0 10px lightgray,
+        0 0 20px lightgray,
+        0 0 30px gray;
 }
 
-.neptune-page h2 {
-    text-align: center;
-    color: blue;
-    animation: glow 2s infinite alternate;
+.moon-page h2 {
+    color: lightgray;
+    animation: moonGlow 2s infinite alternate;
 }
 
-.neptune-page h3 {
-    text-align: center;
-    color: blue;
+.moon-page h3 {
+    color: lightgray;
 }
 
 /* ========================================
-   HEADING GLOW ANIMATION (Neptune)
+   HEADING GLOW ANIMATION (The Moon)
    ======================================== */
 
-.neptune-page h2 {
-    color: blue;
-    animation: neptuneGlow 2s infinite alternate;
-}
-
-@keyframes neptuneGlow {
+@keyframes moonGlow {
     from {
         text-shadow:
-            0 0 5px blue,
-            0 0 10px blue,
-            0 0 15px rgb(26, 47, 233);
+            0 0 5px lightgray,
+            0 0 10px lightgray,
+            0 0 15px gray;
     }
 
     to {
         text-shadow:
-            0 0 20px blue,
-            0 0 30px blue,
-            0 0 40px rgb(26, 47, 233);
+            0 0 20px lightgray,
+            0 0 30px lightgray,
+            0 0 40px gray;
     }
 }
 
+
 /* ========================================
-   LINKS (Neptune)
+   LINKS (The Moon)
    ======================================== */
 
-.neptune-page a {
+.moon-page a {
     display: block;
     color: white;
     padding: 10px 20px;
     text-decoration: none;
 }
 
-.neptune-page a:hover {
-    color: blue;
-
+.moon-page a:hover {
+    color: lightgray;
     text-shadow:
-        0 0 10px blue,
-        0 0 20px blue,
-        0 0 30px rgb(26, 47, 233);
+        0 0 10px lightgray,
+        0 0 20px gray;
 }
 
 /* ========================================
-   BUTTON (Neptune)
+   BUTTON (The Moon)
    ======================================== */
 
-.neptune-page button {
+.moon-page button {
     background-color: black;
-    color: blue;
-    border: 2px solid blue;
-
+    color: lightgray;
+    border: 2px solid lightgray;
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
     transition: 0.3s;
 }
 
-/* ========================================
-   FACT TEXT (Neptune)
-   ======================================== */
-
-.neptune-page p {
-    color: blue;
-    text-align: center;
+.moon-page button:hover {
+    background-color: lightgray;
+    color: black;
 }
 
 /* ========================================
-   Planet Image (Neptune)
+   FACT TEXT (The Moon)
    ======================================== */
 
-.neptune-page #neptune {
+.moon-page p {
+    color: lightgray;
+    text-align: center;
+    font-size: 18px;
+}
+
+/* ========================================
+   Planet Image (The Moon)
+   ======================================== */
+
+.moon-page #moon {
     border-radius: 50%;
     box-shadow:
-        0 0 20px blue,
-        0 0 40px blue,
-        0 0 70px rgb(26, 47, 233);
+        0 0 20px lightgray,
+        0 0 40px lightgray,
+        0 0 70px gray;
 
 }
+
 
 /*
 -----------------------------------------------------SATURN PAGE STYLES-----------------------------------------------------
@@ -734,6 +754,15 @@ nav a:hover {
     font-size: 16px;
     cursor: pointer;
     transition: 0.3s;
+}
+
+#saturnButton:hover {
+    background-color: #eddaa9;
+}
+
+#saturnResult {
+    font-weight: bold;
+    margin-top: 15px;
 }
 
 /* ========================================
@@ -844,6 +873,30 @@ nav a:hover {
     font-size: 16px;
     cursor: pointer;
     transition: 0.3s;
+}
+
+#planetGuess {
+    padding: 8px;
+    border-radius: 6px;
+    margin: 8px;
+}
+
+#checkGuess {
+    background-color: #405a83;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#checkGuess:hover {
+    background-color: #627da8;
+}
+
+#quizResult {
+    font-weight: bold;
+    margin-top: 12px;
 }
 
 /* ========================================
