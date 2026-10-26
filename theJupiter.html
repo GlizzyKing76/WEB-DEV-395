@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <link rel="stylesheet" href="style.css">
+        <script src="jupiter.js" defer></script>
         <title>Jupiter</title>
     </head>
     <body class="jupiter-page">
@@ -11,9 +12,8 @@
         <h2>What is Jupiter?</h2>
         <p>
             Jupiter is the biggest planet in our solar system, it has a radius of 43,440.7 miles (69,911 kilometers) and is about
-            11 times wider than Earth. It is a gas giant, which means it is mostly made of hydrogen and helium.
-            Jupiter's composition is similar to that of the Sun, which is why it is sometimes referred to as a "failed star." This also
-            gives Jupiter the largest ocean in our Solar System, only that it is not made of water, but of liquid metallic hydrogen.
+            11 times wider than Earth. It is a gas giant, which means it is mostly made of hydrogen and helium. Jupiter's composition is similar to that of the Sun. 
+            This also gives Jupiter the largest ocean in our Solar System, only that it is not made of water, but of liquid metallic hydrogen.
             A spacecraft would not be able to land on Jupiter, it would just sink into the planet's atmosphere and eventually be crushed by the intense pressure.
         </p>
         <h2>Jupiter's Eye</h2>
@@ -21,7 +21,6 @@
             id="jupiter_eye"
             src="https://assets.science.nasa.gov/dynamicimage/assets/science/psd/solar/2023/09/g/grs_animation_1200.jpg?w=1200&h=690&fit=clip&crop=faces%2Cfocalpoint"
             alt="Jupiter's Great Red Spot"
-            onclick="toggleStorm()"
             style="cursor: pointer;"
             width="400"
             height="300"
@@ -44,24 +43,5 @@
             <a href="theUranus.html">Uranus</a>
             <a href="theMoon.html">The Moon</a>
         </nav>
-        <script>
-            function toggleStorm() {
-                    const storm = document.getElementById("jupiter_eye");
-
-                    const stillImage =
-                        "https://assets.science.nasa.gov/dynamicimage/assets/science/psd/solar/2023/09/g/grs_animation_1200.jpg?w=1200&h=690&fit=clip&crop=faces%2Cfocalpoint";
-
-                    const animatedImage =
-                        "https://assets.science.nasa.gov/content/dam/science/psd/solar/2023/09/p/i/a/PIA22178.gif";
-
-                    if (storm.dataset.animated === "true") {
-                        storm.src = stillImage;
-                        storm.dataset.animated = "false";
-                    } else {
-                        storm.src = animatedImage;
-                        storm.dataset.animated = "true";
-                    }
-                }
-        </script>
     </body>
 </html>

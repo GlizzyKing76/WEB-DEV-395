@@ -4,10 +4,15 @@
         <meta charset="utf-8">
         <title>The Earth</title>
         <link rel="stylesheet" href="style.css">
+        <script src="earth.js" defer></script>
     </head>
     <body class="earth-page">
         <h1>Welcome to Earth</h1>
         <img id="earth" src="https://cdn.pixabay.com/photo/2011/12/13/14/28/earth-11009_1280.jpg" alt="The Earth" width="300" height="300">
+        <div class="planet-control">
+            <button id="dayNightToggle" type="button" aria-pressed="false">Show Earth's night side</button>
+            <p id="dayNightStatus" aria-live="polite">Earth is shown in daylight.</p>
+        </div>
         <h2>What is Earth?</h2>
         <p>
             Earth is the biggest terrestrial planet in our solar system and the fifth largest planet overall.
@@ -34,11 +39,5 @@
             <a href="theUranus.html">Uranus</a>
             <a href="theMoon.html">The Moon</a>
         </nav>
-        <script>
-            const earth = document.getElementById("earth");
-            earth.addEventListener("click", function() {
-                earth.classList.toggle("spinning");
-            });
-        </script>
     </body>
 </html>

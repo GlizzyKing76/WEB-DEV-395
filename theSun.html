@@ -4,10 +4,16 @@
         <meta charset="utf-8">
         <title>The Sun</title>
         <link rel="stylesheet" href="style.css">
+        <script src="sun.js" defer></script>
     </head>
     <body class="sun-page">
         <h1>Welcome to the Sun</h1>
         <img id="sun" src="https://th.bing.com/th/id/R.b93ecbd5d86bf78a66bc0562190d1ad4?rik=Cq4QrznUKGbmqQ&riu=http%3a%2f%2fassets.labroots.com%2f_public%2f_files%2fsystem%2fcontent-articles%2fimages%2fprofile%2f1685_4096x4096.jpg&ehk=e9YD7YgrFJu6teTi94X%2f8iotKWc9MRuVSThDJrQcCss%3d&risl=&pid=ImgRaw&r=0" alt="The Sun" width="300" height="300">
+        <div class="planet-control">
+            <p for="flareIntensity">Solar flare intensity:</p>
+            <input type="range" id="flareIntensity" min="0" max="100" step="10" value="0">
+            <p id="flareLabel" aria-live="polite">Flare intensity: 0%</p>
+        </div>
         <h2>What is the Sun?</h2>
         <p>
             Our Sun is a yellow dwarf star that's 4.5 billion years old. It is the center of our solar system
@@ -18,9 +24,10 @@
         <h2>Solar Flares</h2>
         <img id = 'solar_flare' src="https://svs.gsfc.nasa.gov/vis/a010000/a014100/a014129/March_31_M9pt7_flare_131-171_1080.jpg" alt="Solar Flare" width="500" height="300">
         <p>
-            When the Sun's activity cycle goes to it's peak know as solar maximum, we start to see Sunspots. Sunspots
-            are eruptions called solar flares, solar activity can release huge amounts of energy and particles that 
-            affects us in Earth. They can interfere with satellites, GPS, and radio communications.
+            When the Sun's activity cycle goes to its peak known as solar maximum, we start to see sunspots. Sunspots
+            are regions on the Sun's surface and solar flares are eruptions that can originate from active regions around sunspots. 
+            solar activity can release huge amounts of energy and particles that affects us on Earth. They can interfere with satellites, 
+            GPS, and radio communications.
         </p>
         <nav aria-label="Main navigation">
             <a href="theSolarSystem.html">Home</a>
@@ -33,11 +40,5 @@
             <a href="theUranus.html">Uranus</a>
             <a href="theMoon.html">The Moon</a>
         </nav>
-        <script>
-            const sun = document.getElementById("sun");
-            sun.addEventListener("click", function() {
-                sun.classList.toggle("flare");    
-            })
-        </script>
     </body>
 </html>

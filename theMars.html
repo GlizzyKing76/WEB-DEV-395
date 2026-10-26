@@ -4,16 +4,18 @@
         <meta charset="utf-8">
         <title>Mars</title>
         <link rel="stylesheet" href="style.css">
+        <script src="mars.js" defer></script>
     </head>
     <body class="mars-page">
         <h1>Welcome to Mars</h1>
         <img id = 'mars' src="https://www.nasa.gov/wp-content/uploads/2024/05/1-viking-mars-globe.jpg?w=1536&format=jpeg" alt="Mars" width="300" height="300">
+        <p>Click on Mars to show the duststorm</p>
         <h2>What is Mars?</h2>
         <p>
             Mars is about half the size of Earth, it has a radius of 2106 miles (3390 kilometers), and it has an
             average distance of 142 million miles (228 million kilometers) from the sun. Mars has a similar rotation
             duration as Earth, Earth being 23.9 hours and Mars being 24.6 hours. Mars has tilt of 25 degrees which
-            is another close similarity it has with Earth, Earth has a 23.4 degree tilt. Mars has a temperatur that
+            is another close similarity it has with Earth, Earth has a 23.4 degree tilt. Mars has a temperature that
             can go as high as 70 degrees Fahrenheit (20 degrees Celsius) to as low as -225 degrees fahrenheit (-153 degrees celsius)
         </p>
         <h2>Mars' Moons</h2>
@@ -35,11 +37,5 @@
             <a href="theUranus.html">Uranus</a>
             <a href="theMoon.html">The Moon</a>
         </nav>    
-        <script>
-            const mars = document.getElementById("mars");
-            mars.addEventListener("click", function() {
-                mars.classList.toggle("dustStorm");
-            });
-        </script>
     </body>
 </html>

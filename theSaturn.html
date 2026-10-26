@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <link rel="stylesheet" href="style.css">
+        <script src="saturn.js" defer></script>
         <title>Saturn</title>
     </head>
     <body class="saturn-page">
@@ -26,7 +27,7 @@
         <h2>What Would You Weigh on Saturn?</h2>
         <p>Enter your weight on Earth to calculate your approximate weight on Saturn!</p>
 
-        <label for="earthWeight">Your Earth weight (in pounds):</label>
+        <p for="earthWeight">Your Earth weight (in pounds):</p>
         <input type="number" id="earthWeight" min="1" max="1000" placeholder="Enter your weight">
 
         <button id="saturnButton">Calculate My Saturn Weight</button>
@@ -43,28 +44,5 @@
             <a href="theUranus.html">Uranus</a>
             <a href="theMoon.html">The Moon</a>
         </nav>
-        <script>
-            const saturnButton = document.getElementById("saturnButton");
-
-            saturnButton.addEventListener("click", function() {
-                const earthWeight = Number(
-                    document.getElementById("earthWeight").value
-                );
-
-                const saturnResult = document.getElementById("saturnResult");
-
-                if (earthWeight <= 0 || !Number.isFinite(earthWeight)) {
-                    saturnResult.textContent = "Please enter a valid weight!";
-                    return;
-                }
-
-                const saturnWeight = earthWeight * 1.06;
-
-                saturnResult.textContent =
-                    "You would weigh approximately " +
-                    saturnWeight.toFixed(1) +
-                    " pounds on Saturn!";
-            });
-        </script>
     </body>
 </html>

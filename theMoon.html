@@ -4,10 +4,12 @@
         <meta charset="utf-8">
         <title>The Moon</title>
         <link rel="stylesheet" href="style.css">
+        <script src="moon.js" defer></script>
     </head>
     <body class ="moon-page">
         <h1>Welcome to Our Moon</h1>
-        <img id = 'moon' class = "planet-image" src="https://imageio.forbes.com/specials-images/imageserve/649c36f19989cde982e45cbe/0x0.jpg?format=jpg&width=1200 alt="Moon" width="300" height="300">
+        <img id = 'moon' class = "planet-image" src="https://imageio.forbes.com/specials-images/imageserve/649c36f19989cde982e45cbe/0x0.jpg?format=jpg&width=1200" alt= "Moon" width="300" height="300">
+        <p>Click on the Moon to show its phases!</p>
         <h2>What is Our Moon?</h2>
         <p>
             Our moon has a radius of about 1,080 miles (1,740 kilometers), which is less than a third of the Earth's width.
@@ -16,7 +18,7 @@
             The Moon has a core, mantle, and crust. Its core, much like Earth has a solid and a liquid core. The solid part
             is 149 miles (240 kilometers) in radius and the liquid part, which surrounds the solid part, is about 56 miles (90 kilometers) thick.
         </p>
-        <h2></h2>
+        <h2>Water In The Moon</h2>
         <img id = 'moon_water' src="https://assets.science.nasa.gov/dynamicimage/assets/science/psd/lunar-science/internal_resources/581/Observations_Of_Lunar_Debris_Reveal_More.jpg?w=1280&h=720&fit=clip&crop=faces%2Cfocalpoint" alt="Moon Water" width="500" height="300">
         <p>
             The first discovery of water on the Moon was made in 2008 by the Indian mission Chandrayaan-1. It detected hydroxyl molecules spread across the lunar surface and concentrated at the poles.
@@ -33,37 +35,5 @@
             <a href="theSaturn.html">Saturn</a>
             <a href="theUranus.html">Uranus</a>
         </nav>
-        <script>
-            const moon = document.getElementById("moon");
-
-            const moonPhases = [
-                //New Moon
-                "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/New_Moon.jpg/1280px-New_Moon.jpg",
-                //Waxing Crescent
-                "https://th.bing.com/th/id/R.b07c214d99e47b2e74d13553e6ca236e?rik=LGwl%2fQv0sJFihg&pid=ImgRaw&r=0",
-                //First Quarter
-                "https://th.bing.com/th/id/R.4d3eb12bd770bb69de81a284868ca54c?rik=VpOmWTugvc%2bTaA&riu=http%3a%2f%2fd1jqu7g1y74ds1.cloudfront.net%2fwp-content%2fuploads%2f2010%2f06%2fFlying-Across-the-Moon1.jpg&ehk=9kNSVu1VEaPESqG27jnlGmYEm0VdvCSkRqyithFiLPc%3d&risl=&pid=ImgRaw&r=0",
-                //Waxing Gibbous
-                "https://spaceandtelescope.com/wp-content/uploads/2023/03/Waxing-gibbous-moon.jpg",
-                //Full Moon
-                "https://imageio.forbes.com/specials-images/imageserve/649c36f19989cde982e45cbe/0x0.jpg?format=jpg&width=1200",
-                //Waning Gibbous
-                "https://th.bing.com/th/id/R.24cf9deecd0b96e3590ec0d6362e8c2e?rik=HKfKU9VLyxzsUg&riu=http%3a%2f%2fastronomy.robpettengill.org%2fphotos%2fslides%2fMoon2820WanGib140816.jpg&ehk=s%2bzLS85MuRHI%2fDxQw0%2fsLfs4kM2%2b6ioydyHl6pwfY34%3d&risl=&pid=ImgRaw&r=0",
-                //hird Quarter
-                "https://images.fineartamerica.com/images-medium-large-5/third-quarter-moon-nasas-scientific-visualization-studioscience-photo-library.jpg",
-                //Waning Crescent
-                "https://images.fineartamerica.com/images-medium-large-5/the-23-day-old-waning-crescent-moon-alan-dyer.jpg"
-            ];
-
-            let currentPhase = 5;
-
-            moon.addEventListener("click", function(){
-                currentPhase++;
-                if (currentPhase >= moonPhases.length) {
-                    currentPhase = 0;
-                }
-                moon.src = moonPhases[currentPhase];
-            });
-        </script>
     </body>
 </html>

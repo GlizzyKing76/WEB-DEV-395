@@ -4,11 +4,17 @@
         <meta charset="utf-8">
         <title>Uranus</title>
         <link rel="stylesheet" href="style.css">
+        <script src="uranus.js" defer></script>
     </head>
     <body class = 'uranus-page'>
         <h1>Welcome to Uranus</h1>
         <img id="uranus" src="https://static01.nyt.com/images/2023/04/04/multimedia/23sci-uranus-01-vftp/23sci-uranus-01-vftp-mediumSquareAt3X.jpg" alt="Uranus" width="300" height="300">
-        <h4>Click to show Uranus' rings!</h4>
+        <div class="planet-control">
+            <p for="axialTilt">Illustrate Uranus's axial tilt:</p>
+            <input type="range" id="axialTilt" min="0" max="98" step="1" value="98">
+            <p id="tiltLabel" aria-live="polite">Illustrated tilt: 98°</p>
+            <p class="control-note">The slider rotates the image as a visual demonstration of Uranus's approximately 98° axial tilt.</p>
+        </div>
         <h2>What is Uranus?</h2>
         <p>
             Uranus was the first planet discovered with a telescope, and was discovered by William Herschel in 1781. It is named after the Greek god of the sky, Uranus.
@@ -32,21 +38,5 @@
             <a href="theSaturn.html">Saturn</a>
             <a href="theMoon.html">The Moon</a>
         </nav>
-        <script>
-            const uranus = document.getElementById('uranus');
-            const normalUranus = 'https://static01.nyt.com/images/2023/04/04/multimedia/23sci-uranus-01-vftp/23sci-uranus-01-vftp-mediumSquareAt3X.jpg';
-            const uranusWithRings = 'https://cdn.mos.cms.futurecdn.net/vFL2StpmgYzT9QtZMbbgWS.jpeg';
-            let showingRings = false;
-        
-            uranus.addEventListener('click', function() {
-                if (uranus.src === normalUranus) {
-                    uranus.src = uranusWithRings;
-                    showingRings = true;
-                } else {
-                    uranus.src = normalUranus;
-                    showingRings = false;
-                }
-            });
-        </script>
     </body>
 </html>

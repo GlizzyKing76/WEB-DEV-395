@@ -3,7 +3,6 @@
    ======================================== */
 
 body{
-    background-image: url('https://wallpapercave.com/wp/wp9116463.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -11,6 +10,59 @@ body{
     text-align: center;
     color: white;
     padding: 20px 20px;
+}
+
+.earth-page,
+.sun-page,
+.mercury-page,
+.venus-page,
+.mars-page,
+.jupiter-page,
+.saturn-page,
+.uranus-page,
+.neptune-page,
+.moon-page {
+    font-family: serif;
+}
+
+.earth-page button,
+.sun-page input,
+.mercury-page button,
+.saturn-page button,
+.saturn-page input,
+.uranus-page input,
+.neptune-page input {
+    font-family: inherit;
+}
+
+.planet-control {
+    margin: 20px auto;
+    max-width: 500px;
+}
+
+.planet-control label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.planet-control input[type="range"] {
+    width: min(100%, 350px);
+}
+
+.planet-control p {
+    margin: 8px 0;
+}
+
+.control-note {
+    font-size: 0.9em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .earth-page #earth,
+    .sun-page #sun,
+    .uranus-page #uranus {
+        transition: none;
+    }
 }
 
 /* ========================================
@@ -47,9 +99,9 @@ nav a {
 }
 
 nav a:hover {
-    color: cyan;
-    border-color: cyan;
-    text-shadow: 0 0 10px cyan;
+    color: whitesmoke;
+    border-color: whitesmoke;
+    text-shadow: 0 0 10px whitesmoke;
 }
 
 /*
@@ -72,20 +124,6 @@ nav a:hover {
 
 .earth-page h2 {
     text-align: center;
-    color: lightblue;
-    animation: glow 2s infinite alternate;
-}
-
-.earth-page h3 {
-    text-align: center;
-    color: lightblue;
-}
-
-/* ========================================
-   HEADING GLOW ANIMATION (Earth)
-   ======================================== */
-
-.earth-page h2 {
     color: lightblue;
     animation: earthGlow 2s infinite alternate;
 }
@@ -141,6 +179,11 @@ nav a:hover {
     transition: 0.3s;
 }
 
+.earth-page .planet-control button:hover {
+    color: white;
+    box-shadow: 0 0 12px lightblue;
+}
+
 /* ========================================
    FACT TEXT (Earth)
    ======================================== */
@@ -149,13 +192,6 @@ nav a:hover {
     color: lightblue;
     text-align: center;
     font-size: 18px;
-}
-
-.earth-page b {
-    color: lightblue;
-    text-align: justify;
-    font-size: 18px;
-    margin-bottom: 20px;
 }
 
 /* ========================================
@@ -170,13 +206,13 @@ nav a:hover {
         0 0 70px rgba(0, 100, 255, 0.5);
 }
 
-.earth-page #earth.spinning{
-    animation: spin 5s linear infinite;
+.earth-page #earth {
+    transition: filter 0.4s ease, box-shadow 0.4s ease;
 }
 
-@keyframes spin {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+.earth-page #earth.night-side {
+    filter: brightness(0.45);
+    box-shadow: 0 0 25px rgba(30, 60, 180, 0.8);
 }
 
 /*
@@ -199,20 +235,6 @@ nav a:hover {
 
 .jupiter-page h2 {
     text-align: center;
-    color: burlywood;
-    animation: glow 2s infinite alternate;
-}
-
-.jupiter-page h3 {
-    text-align: center;
-    color: burlywood;
-}
-
-/* ========================================
-   HEADING GLOW ANIMATION (Jupiter)
-   ======================================== */
-
-.jupiter-page h2 {
     color: burlywood;
     animation: jupiterGlow 2s infinite alternate;
 }
@@ -254,21 +276,6 @@ nav a:hover {
 }
 
 /* ========================================
-   BUTTON (Jupiter)
-   ======================================== */
-
-.jupiter-page button {
-    background-color: black;
-    color: burlywood;
-    border: 2px solid burlywood;
-
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-/* ========================================
    TEXT (Jupiter)
    ======================================== */
 
@@ -276,13 +283,6 @@ nav a:hover {
     color: burlywood;
     text-align: center;
     font-size: 18px;
-}
-
-.jupiter-page b {
-    color: burlywood;
-    text-align: justify;
-    font-size: 18px;
-    margin-bottom: 20px;
 }
 
 /* ========================================
@@ -297,30 +297,6 @@ nav a:hover {
         0 0 70px rgba(139, 69, 19, 0.5);
 }
 
-/* Jupiter's Great Red Spot swirling effect */
-#jupiter_eye {
-    cursor: pointer;
-    transition: transform 1.5s ease-in-out;
-    transform-origin: center center;
-}
-
-#jupiter_eye.swirling {
-    animation: jupiterSwirl 1.5s ease-in-out;
-}
-
-@keyframes jupiterSwirl{
-    0% {
-        transform: rotate(0deg) scale(1);
-    }
-
-    50% {
-        transform: rotate(360deg) scale(0.25);
-    }
-
-    100% {
-        transform: rotate(720deg) scale(1);
-    }
-}
 /*
 -----------------------------------------------------MARS PAGE STYLES-----------------------------------------------------
 */
@@ -341,20 +317,6 @@ nav a:hover {
 
 .mars-page h2 {
     text-align: center;
-    color: orange;
-    animation: glow 2s infinite alternate;
-}
-
-.mars-page h3 {
-    text-align: center;
-    color: orange;
-}
-
-/* ========================================
-   HEADING GLOW ANIMATION (Mars)
-   ======================================== */
-
-.mars-page h2 {
     color: orange;
     animation: marsGlow 2s infinite alternate;
 }
@@ -396,27 +358,13 @@ nav a:hover {
 }
 
 /* ========================================
-   BUTTON (Mars)
-   ======================================== */
-
-.mars-page button {
-    background-color: black;
-    color: orange;
-    border: 2px solid orange;
-
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-/* ========================================
    FACT TEXT (Mars)
    ======================================== */
 
 .mars-page p {
     color: orange;
     text-align: center;
+    font-size: 18px;
 }
 
 /* ========================================
@@ -461,20 +409,6 @@ nav a:hover {
 
 .mercury-page h2 {
     text-align: center;
-    color: lightgray;
-    animation: glow 2s infinite alternate;
-}
-
-.mercury-page h3 {
-    text-align: center;
-    color: lightgray;
-}
-
-/* ========================================
-   HEADING GLOW ANIMATION (Mercury)
-   ======================================== */
-
-.mercury-page h2 {
     color: lightgray;
     animation: mercuryGlow 2s infinite alternate;
 }
@@ -541,13 +475,6 @@ nav a:hover {
     font-size: 18px;
 }
 
-.mercury-page b {
-    color: lightgray;
-    text-align: justify;
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
 /* ========================================
    Planet Image (Mercury)
    ======================================== */
@@ -579,10 +506,6 @@ nav a:hover {
 .moon-page h2 {
     color: lightgray;
     animation: moonGlow 2s infinite alternate;
-}
-
-.moon-page h3 {
-    color: lightgray;
 }
 
 /* ========================================
@@ -622,25 +545,6 @@ nav a:hover {
     text-shadow:
         0 0 10px lightgray,
         0 0 20px gray;
-}
-
-/* ========================================
-   BUTTON (The Moon)
-   ======================================== */
-
-.moon-page button {
-    background-color: black;
-    color: lightgray;
-    border: 2px solid lightgray;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.moon-page button:hover {
-    background-color: lightgray;
-    color: black;
 }
 
 /* ========================================
@@ -687,20 +591,6 @@ nav a:hover {
 
 .saturn-page h2 {
     text-align: center;
-    color: goldenrod;
-    animation: glow 2s infinite alternate;
-}
-
-.saturn-page h3 {
-    text-align: center;
-    color: goldenrod;
-}
-
-/* ========================================
-   HEADING GLOW ANIMATION (Saturn)
-   ======================================== */
-
-.saturn-page h2 {
     color: goldenrod;
     animation: saturnGlow 2s infinite alternate;
 }
@@ -772,6 +662,7 @@ nav a:hover {
 .saturn-page p {
     color: goldenrod;
     text-align: center;
+    font-size: 18px;
 }
 
 /* ========================================
@@ -806,20 +697,6 @@ nav a:hover {
 
 .solar-system-page h2 {
     text-align: center;
-    color: whitesmoke;
-    animation: glow 2s infinite alternate;
-}
-
-.solar-system-page h3 {
-    text-align: center;
-    color: whitesmoke;
-}
-
-/* ========================================
-   HEADING GLOW ANIMATION (Solar System)
-   ======================================== */
-
-.solar-system-page h2 {
     color: whitesmoke;
     animation: solarSystemGlow 2s infinite alternate;
 }
@@ -906,6 +783,7 @@ nav a:hover {
 .solar-system-page p {
     color: whitesmoke;
     text-align: center;
+    font-size: 18px;
 }
 
 /* ========================================
@@ -990,20 +868,6 @@ nav a:hover {
 .sun-page h2 {
     text-align: center;
     color: orangered;
-    animation: glow 2s infinite alternate;
-}
-
-.sun-page h3 {
-    text-align: center;
-    color: orangered;
-}
-
-/* ========================================
-   HEADING GLOW ANIMATION (Sun)
-   ======================================== */
-
-.sun-page h2 {
-    color: orangered;
     animation: sunGlow 2s infinite alternate;
 }
 
@@ -1047,17 +911,6 @@ nav a:hover {
    BUTTON (Sun)
    ======================================== */
 
-.sun-page button {
-    background-color: black;
-    color: orangered;
-    border: 2px solid orangered;
-
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
 /* ========================================
    FACT TEXT (Sun)
    ======================================== */
@@ -1065,6 +918,7 @@ nav a:hover {
 .sun-page p {
     color: orangered;
     text-align: center;
+    font-size: 18px;
 }
 
 /* ========================================
@@ -1072,26 +926,16 @@ nav a:hover {
    ======================================== */
 
 .sun-page #sun {
-    cursor: pointer;
     border-radius: 50%;
+    transition: transform 0.25s ease, filter 0.25s ease;
+    transform: scale(var(--flare-scale, 1));
+    filter: drop-shadow(0 0 var(--flare-glow, 0px) orange)
+        drop-shadow(0 0 var(--flare-secondary-glow, 0px) red);
 }
 
-.sun-page #sun.flare {
-    animation: sunFlare 1s infinite alternate;
-}
-@keyframes sunFlare {
-    from {
-        transform: scale(1);
-        box-shadow:
-            0 0 20px orange,
-    }
-    to {
-        transform: scale(1.1);
-        box-shadow:
-            0 0 30px yellow,
-            0 0 60px orange,
-            0 0 100px red
-    }
+.sun-page .planet-control,
+.sun-page .planet-control p {
+    color: orangered;
 }
 
 /*
@@ -1114,20 +958,6 @@ nav a:hover {
 
 .uranus-page h2 {
     text-align: center;
-    color: rgb(0, 225, 255);
-    animation: glow 2s infinite alternate;
-}
-
-.uranus-page h3 {
-    text-align: center;
-    color: rgb(0, 225, 255);
-}
-
-/* ========================================
-   HEADING GLOW ANIMATION (Uranus)
-   ======================================== */
-
-.uranus-page h2 {
     color: rgb(0, 225, 255);
     animation: uranusGlow 2s infinite alternate;
 }
@@ -1172,17 +1002,6 @@ nav a:hover {
    BUTTON (Uranus)
    ======================================== */
 
-.uranus-page button {
-    background-color: black;
-    color: rgb(0, 225, 255);
-    border: 2px solid rgb(0, 225, 255);
-
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
 /* ========================================
    FACT TEXT (Uranus)
    ======================================== */
@@ -1190,6 +1009,7 @@ nav a:hover {
 .uranus-page p {
     color: rgb(0, 225, 255);
     text-align: center;
+    font-size: 18px;
 }
 
 /* ========================================
@@ -1197,22 +1017,20 @@ nav a:hover {
    ======================================== */
 
 .uranus-page #uranus {
-    cursor: pointer;
     border-radius: 50%;
-    transition: transform 1s, box-shadow 1s;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
     box-shadow:
         0 0 20px rgb(0, 225, 255),
         0 0 40px rgb(0, 225, 255),
         0 0 70px rgba(0, 225, 255, 0.678);
 }
 
-.uranus-page #uranus.rings {
-    transform: scale(1.1);
-    box-shadow:
-        0 0 20px rgb(0, 225, 255),
-        0 0 40px rgb(0, 225, 255),
-        0 0 70px rgba(0, 225, 255, 0.7);
+.uranus-page .planet-control,
+.uranus-page .planet-control p {
+    color: rgb(0, 225, 255);
 }
+
+
 
 /*
 -----------------------------------------------------VENUS PAGE STYLES-----------------------------------------------------
@@ -1234,20 +1052,6 @@ nav a:hover {
 
 .venus-page h2 {
     text-align: center;
-    color: rgb(255, 166, 0);
-    animation: glow 2s infinite alternate;
-}
-
-.venus-page h3 {
-    text-align: center;
-    color: rgb(255, 166, 0);
-}
-
-/* ========================================
-   HEADING GLOW ANIMATION (Venus)
-   ======================================== */
-
-.venus-page h2 {
     color: rgb(255, 166, 0);
     animation: venusGlow 2s infinite alternate;
 }
@@ -1292,17 +1096,6 @@ nav a:hover {
    BUTTON (Venus)
    ======================================== */
 
-.venus-page button {
-    background-color: black;
-    color: rgb(255, 166, 0);
-    border: 2px solid rgb(255, 166, 0);
-
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
 /* ========================================
    FACT TEXT (Venus)
    ======================================== */
@@ -1310,6 +1103,7 @@ nav a:hover {
 .venus-page p {
     color: rgb(255, 166, 0);
     text-align: center;
+    font-size: 18px;
 }
 
 /* ========================================
@@ -1342,4 +1136,101 @@ nav a:hover {
         0 0 70px rgba(255, 0, 0, 0.678);
 
     transform: scale(1.2);
+}
+
+/* ========================================
+   PLANET-SPECIFIC PAGE BACKGROUNDS
+   ======================================== */
+
+.solar-system-page {
+    background:
+        radial-gradient(1px 1px at 12% 18%, white 99%, transparent),
+        radial-gradient(2px 2px at 76% 32%, #c9dcff 99%, transparent),
+        radial-gradient(1px 1px at 42% 74%, white 99%, transparent),
+        radial-gradient(1px 1px at 88% 83%, #ffe9b5 99%, transparent),
+        radial-gradient(ellipse at 50% 120%, #263e73 0%, #101a37 45%, #050812 82%);
+    background-size: 190px 190px, 270px 270px, 230px 230px, 310px 310px, cover;
+    background-attachment: fixed;
+}
+
+.sun-page {
+    background:
+        radial-gradient(ellipse at 50% 0%, rgba(255, 107, 20, 0.28), transparent 42%),
+        radial-gradient(ellipse at 90% 100%, rgba(140, 34, 12, 0.25), transparent 45%),
+        linear-gradient(145deg, #1b0b12, #35130d 48%, #100b16);
+    background-attachment: fixed;
+}
+
+.mercury-page {
+    background:
+        radial-gradient(ellipse at 15% 15%, rgba(190, 165, 137, 0.2), transparent 38%),
+        radial-gradient(ellipse at 85% 80%, rgba(112, 103, 98, 0.22), transparent 40%),
+        linear-gradient(145deg, #171718, #34302f 52%, #111317);
+    background-attachment: fixed;
+}
+
+.venus-page {
+    background:
+        repeating-linear-gradient(165deg, transparent 0 54px, rgba(255, 199, 109, 0.07) 56px 68px, transparent 73px 118px),
+        radial-gradient(ellipse at 50% 5%, rgba(236, 151, 55, 0.28), transparent 46%),
+        linear-gradient(145deg, #27160f, #57311a 52%, #1b1110);
+    background-attachment: fixed;
+}
+
+.earth-page {
+    background:
+        radial-gradient(ellipse at 18% 24%, rgba(28, 115, 148, 0.32), transparent 42%),
+        radial-gradient(ellipse at 82% 72%, rgba(37, 113, 91, 0.24), transparent 42%),
+        linear-gradient(145deg, #071a2d, #102b3c 50%, #09131f);
+    background-attachment: fixed;
+}
+
+.moon-page {
+    background:
+        radial-gradient(circle at 18% 26%, rgba(192, 198, 207, 0.12) 0 2px, transparent 3px),
+        radial-gradient(circle at 79% 66%, rgba(192, 198, 207, 0.1) 0 4px, transparent 5px),
+        radial-gradient(ellipse at 50% 0%, rgba(111, 120, 136, 0.22), transparent 48%),
+        linear-gradient(145deg, #090b12, #20232c 52%, #0b0d13);
+    background-size: 145px 145px, 205px 205px, auto, auto;
+    background-attachment: fixed;
+}
+
+.mars-page {
+    background:
+        radial-gradient(ellipse at 12% 16%, rgba(229, 113, 63, 0.21), transparent 40%),
+        radial-gradient(ellipse at 88% 84%, rgba(125, 45, 31, 0.28), transparent 43%),
+        linear-gradient(145deg, #21110f, #49221a 50%, #170e10);
+    background-attachment: fixed;
+}
+
+.jupiter-page {
+    background:
+        repeating-linear-gradient(176deg, transparent 0 68px, rgba(209, 160, 111, 0.08) 71px 91px, transparent 96px 142px),
+        radial-gradient(ellipse at 75% 20%, rgba(187, 124, 78, 0.18), transparent 40%),
+        linear-gradient(145deg, #1b1312, #38251f 52%, #151116);
+    background-attachment: fixed;
+}
+
+.saturn-page {
+    background:
+        repeating-linear-gradient(12deg, transparent 0 76px, rgba(223, 194, 139, 0.08) 79px 96px, transparent 101px 154px),
+        radial-gradient(ellipse at 20% 85%, rgba(184, 145, 91, 0.18), transparent 44%),
+        linear-gradient(145deg, #1b1713, #3c3021 52%, #15120f);
+    background-attachment: fixed;
+}
+
+.uranus-page {
+    background:
+        radial-gradient(ellipse at 50% 0%, rgba(75, 197, 208, 0.2), transparent 45%),
+        radial-gradient(ellipse at 90% 90%, rgba(28, 105, 140, 0.22), transparent 42%),
+        linear-gradient(145deg, #08191f, #12323a 52%, #09141e);
+    background-attachment: fixed;
+}
+
+.neptune-page {
+    background:
+        radial-gradient(ellipse at 15% 15%, rgba(54, 91, 210, 0.26), transparent 42%),
+        radial-gradient(ellipse at 88% 80%, rgba(25, 137, 184, 0.21), transparent 43%),
+        linear-gradient(145deg, #080d25, #101d4b 52%, #080b1a);
+    background-attachment: fixed;
 }
